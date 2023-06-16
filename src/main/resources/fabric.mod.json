@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "more_armor_trims",
+  "version": "1.0.0-1.20.1",
+
+  "name": "More Armor Trims",
+  "description": "Adds new armor trims",
+  "authors": [
+    "Masik16u"
+  ],
+  "contact": {
+    "homepage": "https://github.com/masik16u/MasiksPuzzleDungeon/wiki"
+  },
+
+  "license": "GNU General Public License v3.0",
+  "icon": "assets/more_armor_trims/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.masik.morearmortrims.MoreArmorTrims"
+    ],
+    "client": [
+      "net.masik.morearmortrims.MoreArmorTrimsClient"
+    ]
+  },
+  "mixins": [
+    "more_armor_trims.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.17",
+    "fabric-api": "*",
+    "minecraft": ">=1.20",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

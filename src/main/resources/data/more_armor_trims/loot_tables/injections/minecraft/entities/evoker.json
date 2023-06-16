@@ -1,0 +1,24 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "more_armor_trims:ram_armor_trim_smithing_template"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "vehicle": {
+              "type": "minecraft:ravager"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "more_armor_trims:storm_armor_trim_smithing_template"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:weather_check",
+          "thundering": true
+        }
+      ]
+    }
+  ]
+}
