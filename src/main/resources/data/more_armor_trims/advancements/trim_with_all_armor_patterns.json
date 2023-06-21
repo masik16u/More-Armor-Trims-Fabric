@@ -114,6 +114,24 @@
         "recipe_id": "more_armor_trims:myth_armor_trim_smithing_template_smithing_trim"
       },
       "trigger": "minecraft:recipe_crafted"
+    },
+    "armor_trimmed_more_armor_trims:greed_armor_trim_smithing_template_smithing_trim": {
+      "conditions": {
+        "recipe_id": "more_armor_trims:greed_armor_trim_smithing_template_smithing_trim"
+      },
+      "trigger": "minecraft:recipe_crafted"
+    },
+    "armor_trimmed_more_armor_trims:beast_armor_trim_smithing_template_smithing_trim": {
+      "conditions": {
+        "recipe_id": "more_armor_trims:beast_armor_trim_smithing_template_smithing_trim"
+      },
+      "trigger": "minecraft:recipe_crafted"
+    },
+    "armor_trimmed_more_armor_trims:fever_armor_trim_smithing_template_smithing_trim": {
+      "conditions": {
+        "recipe_id": "more_armor_trims:fever_armor_trim_smithing_template_smithing_trim"
+      },
+      "trigger": "minecraft:recipe_crafted"
     }
   },
   "display": {
@@ -188,6 +206,15 @@
     ],
     [
       "armor_trimmed_more_armor_trims:myth_armor_trim_smithing_template_smithing_trim"
+    ],
+    [
+      "armor_trimmed_more_armor_trims:greed_armor_trim_smithing_template_smithing_trim"
+    ],
+    [
+      "armor_trimmed_more_armor_trims:beast_armor_trim_smithing_template_smithing_trim"
+    ],
+    [
+      "armor_trimmed_more_armor_trims:fever_armor_trim_smithing_template_smithing_trim"
     ]
   ],
   "sends_telemetry_event": true

@@ -8,10 +8,6 @@ import net.minecraft.util.Identifier;
 
 public class ModLootTableModifiers {
 
-    /*private static final Identifier FISHING_LOOT_TABLE_ID = new Identifier("minecraft", "gameplay/fishing/treasure");
-    private static final Identifier EVOKER_LOOT_TABLE_ID = new Identifier("minecraft", "gameplay/fishing/treasure");
-    private static final Identifier RAVAGER_LOOT_TABLE_ID = new Identifier("minecraft", "gameplay/fishing/treasure");*/
-
     private static Identifier buildInjectionRoute(Identifier id) {
         return new Identifier(MoreArmorTrims.MOD_ID, "injections/" + id.getNamespace() + "/" + id.getPath());
     }
@@ -34,25 +30,5 @@ public class ModLootTableModifiers {
             supplier.pool(pool);
         }
     }
-
-    /*public static void modifyLootTables() {
-        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
-            if(FISHING_LOOT_TABLE_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(WeatherCheckLootCondition.create().thundering(true))
-                        .conditionally(RandomChanceLootCondition.builder(0.6f))
-                        .with(ItemEntry.builder(ModItems.STORM_ARMOR_TRIM_SMITHING_TEMPLATE));
-                tableBuilder.pool(poolBuilder.build());
-            }
-            if(EVOKER_LOOT_TABLE_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(KilledByPlayerLootCondition.builder().build())
-                        .with(ItemEntry.builder(ModItems.STORM_ARMOR_TRIM_SMITHING_TEMPLATE));
-                tableBuilder.pool(poolBuilder.build());
-            }
-        });
-    }*/
 
 }

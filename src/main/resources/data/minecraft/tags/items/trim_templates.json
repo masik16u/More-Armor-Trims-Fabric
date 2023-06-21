@@ -18,6 +18,9 @@
     "minecraft:host_armor_trim_smithing_template",
     "more_armor_trims:storm_armor_trim_smithing_template",
     "more_armor_trims:ram_armor_trim_smithing_template",
-    "more_armor_trims:myth_armor_trim_smithing_template"
+    "more_armor_trims:myth_armor_trim_smithing_template",
+    "more_armor_trims:greed_armor_trim_smithing_template",
+    "more_armor_trims:beast_armor_trim_smithing_template",
+    "more_armor_trims:fever_armor_trim_smithing_template"
   ]
 }

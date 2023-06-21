@@ -39,6 +39,18 @@ public class ModItems {
             new SmithingTemplateItem(APPLIES_TO, INGREDIENTS, Text.translatable("trim_pattern.more_armor_trims.myth").formatted(DESC_FORMATTING),
                     BASE_SLOT_DESC, ADDITIONS_SLOT_DESC, armorTrimEmptyBaseSlotTextures, armorTrimEmptyAdditionsSlotTextures));
 
+    public static final SmithingTemplateItem GREED_ARMOR_TRIM_SMITHING_TEMPLATE = registerItem("greed_armor_trim_smithing_template",
+            new SmithingTemplateItem(APPLIES_TO, INGREDIENTS, Text.translatable("trim_pattern.more_armor_trims.greed").formatted(DESC_FORMATTING),
+                    BASE_SLOT_DESC, ADDITIONS_SLOT_DESC, armorTrimEmptyBaseSlotTextures, armorTrimEmptyAdditionsSlotTextures));
+
+    public static final SmithingTemplateItem BEAST_ARMOR_TRIM_SMITHING_TEMPLATE = registerItem("beast_armor_trim_smithing_template",
+            new SmithingTemplateItem(APPLIES_TO, INGREDIENTS, Text.translatable("trim_pattern.more_armor_trims.beast").formatted(DESC_FORMATTING),
+                    BASE_SLOT_DESC, ADDITIONS_SLOT_DESC, armorTrimEmptyBaseSlotTextures, armorTrimEmptyAdditionsSlotTextures));
+
+    public static final SmithingTemplateItem FEVER_ARMOR_TRIM_SMITHING_TEMPLATE = registerItem("fever_armor_trim_smithing_template",
+            new SmithingTemplateItem(APPLIES_TO, INGREDIENTS, Text.translatable("trim_pattern.more_armor_trims.fever").formatted(DESC_FORMATTING),
+                    BASE_SLOT_DESC, ADDITIONS_SLOT_DESC, armorTrimEmptyBaseSlotTextures, armorTrimEmptyAdditionsSlotTextures));
+
 
     private static SmithingTemplateItem registerItem(String name, SmithingTemplateItem item) {
         return Registry.register(Registries.ITEM, new Identifier(MoreArmorTrims.MOD_ID, name), item);

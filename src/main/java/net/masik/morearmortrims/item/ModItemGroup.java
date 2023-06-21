@@ -9,6 +9,9 @@ public class ModItemGroup {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> entries.add(ModItems.STORM_ARMOR_TRIM_SMITHING_TEMPLATE));
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> entries.add(ModItems.RAM_ARMOR_TRIM_SMITHING_TEMPLATE));
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> entries.add(ModItems.MYTH_ARMOR_TRIM_SMITHING_TEMPLATE));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> entries.add(ModItems.GREED_ARMOR_TRIM_SMITHING_TEMPLATE));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> entries.add(ModItems.BEAST_ARMOR_TRIM_SMITHING_TEMPLATE));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> entries.add(ModItems.FEVER_ARMOR_TRIM_SMITHING_TEMPLATE));
     }
 
 }
