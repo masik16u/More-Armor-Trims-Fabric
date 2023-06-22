@@ -19,9 +19,6 @@
   "entrypoints": {
     "main": [
       "net.masik.morearmortrims.MoreArmorTrims"
-    ],
-    "client": [
-      "net.masik.morearmortrims.MoreArmorTrimsClient"
     ]
   },
   "mixins": [
@@ -30,11 +27,8 @@
 
   "depends": {
     "fabricloader": ">=0.14.17",
-    "fabric-api": "*",
+    "fabric-item-group-api-v1": "*",
     "minecraft": ">=1.20",
     "java": ">=17"
-  },
-  "suggests": {
-    "another-mod": "*"
   }
 }
