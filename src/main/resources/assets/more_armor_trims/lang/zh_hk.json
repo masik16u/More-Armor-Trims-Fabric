@@ -1,0 +1,11 @@
+{
+	"trim_pattern.more_armor_trims.storm": "風暴盔甲紋樣",
+	"trim_pattern.more_armor_trims.ram": "撞擊盔甲紋樣",
+	"trim_pattern.more_armor_trims.myth": "神話盔甲紋樣",
+	"trim_pattern.more_armor_trims.greed" : "貪婪盔甲紋樣",
+	"trim_pattern.more_armor_trims.beast": "野獸盔甲紋樣",
+	"trim_pattern.more_armor_trims.fever": "狂熱盔甲紋樣",
+
+	"advancements.adventure.trim_with_all_armor_patterns.title": "全卡集齊",
+	"advancements.adventure.trim_with_all_armor_patterns.description": "每個鍛造模板都至少使用過一次"
+}
