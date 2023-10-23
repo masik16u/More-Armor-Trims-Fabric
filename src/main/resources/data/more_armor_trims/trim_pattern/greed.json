@@ -1,7 +1,7 @@
 {
   "asset_id": "more_armor_trims:greed",
   "description": {
-    "translate": "trim_pattern.more_armor_trims.greed"
+    "translate": "trim_pattern.more_armor_trims.greed_armor_trim_smithing_template"
   },
   "template_item": "more_armor_trims:greed_armor_trim_smithing_template"
 }
