@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.1-SNAPSHOT'
+	id 'fabric-loom' version '1.5-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -77,4 +77,8 @@ publishing {
 		// The repositories here will be used for publishing your artifact, not for
 		// retrieving dependencies.
 	}
+}
+
+loom {
+	accessWidenerPath = file("src/main/resources/more_armor_trims.accesswidener")
 }
