@@ -25,6 +25,8 @@
     "more_armor_trims.mixins.json"
   ],
 
+  "accessWidener" : "more_armor_trims.accesswidener",
+
   "depends": {
     "fabricloader": ">=0.14.17",
     "fabric-api": "*",
