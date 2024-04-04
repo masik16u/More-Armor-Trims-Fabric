@@ -5,17 +5,13 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "more_armor_trims:storm_armor_trim_smithing_template"
+          "name": "more_armor_trims:nihility_armor_trim_smithing_template"
         }
       ],
       "conditions": [
         {
-          "condition": "minecraft:weather_check",
-          "thundering": true
-        },
-        {
           "condition": "minecraft:random_chance",
-          "chance": 0.2
+          "chance": 0.3
         }
       ]
     }

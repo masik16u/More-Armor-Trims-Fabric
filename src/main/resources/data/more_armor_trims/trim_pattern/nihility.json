@@ -1,0 +1,7 @@
+{
+  "asset_id": "more_armor_trims:nihility",
+  "description": {
+    "translate": "trim_pattern.more_armor_trims.nihility_armor_trim_smithing_template"
+  },
+  "template_item": "more_armor_trims:nihility_armor_trim_smithing_template"
+}

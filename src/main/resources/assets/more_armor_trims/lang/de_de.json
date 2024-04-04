@@ -1,10 +1,20 @@
 {
+  "trim_pattern.more_armor_trims.storm": "Sturm-Rüstungsbesatz",
+  "trim_pattern.more_armor_trims.ram": "Rammbock-Rüstungsbesatz",
+  "trim_pattern.more_armor_trims.myth": "Mythos-Rüstungsbesatz",
+  "trim_pattern.more_armor_trims.greed": "Gier-Rüstungsbesatz",
+  "trim_pattern.more_armor_trims.beast": "Biest-Rüstungsbesatz",
+  "trim_pattern.more_armor_trims.fever": "Fieber-Rüstungsbesatz",
+  "trim_pattern.more_armor_trims.wraith": "Gespenst-Rüstungsbesatz",
+  "trim_pattern.more_armor_trims.nihility": "Nichtigkeit-Rüstungsbesatz",
   "trim_pattern.more_armor_trims.storm_armor_trim_smithing_template": "Sturm-Rüstungsbesatz",
   "trim_pattern.more_armor_trims.ram_armor_trim_smithing_template": "Rammbock-Rüstungsbesatz",
   "trim_pattern.more_armor_trims.myth_armor_trim_smithing_template": "Mythos-Rüstungsbesatz",
   "trim_pattern.more_armor_trims.greed_armor_trim_smithing_template": "Gier-Rüstungsbesatz",
   "trim_pattern.more_armor_trims.beast_armor_trim_smithing_template": "Biest-Rüstungsbesatz",
   "trim_pattern.more_armor_trims.fever_armor_trim_smithing_template": "Fieber-Rüstungsbesatz",
+  "trim_pattern.more_armor_trims.wraith_armor_trim_smithing_template": "Gespenst-Rüstungsbesatz",
+  "trim_pattern.more_armor_trims.nihility_armor_trim_smithing_template": "Nichtigkeit-Rüstungsbesatz",
 
   "advancements.adventure.trim_with_all_armor_patterns.title": "Komplette Kartensammlung",
   "advancements.adventure.trim_with_all_armor_patterns.description": "Wende alle Schmiedevorlagen mindestens einmal an"

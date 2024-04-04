@@ -14,7 +14,11 @@
         "more_armor_trims:trims/models/armor/beast",
         "more_armor_trims:trims/models/armor/beast_leggings",
         "more_armor_trims:trims/models/armor/fever",
-        "more_armor_trims:trims/models/armor/fever_leggings"
+        "more_armor_trims:trims/models/armor/fever_leggings",
+        "more_armor_trims:trims/models/armor/wraith",
+        "more_armor_trims:trims/models/armor/wraith_leggings",
+        "more_armor_trims:trims/models/armor/nihility",
+        "more_armor_trims:trims/models/armor/nihility_leggings"
       ],
       "palette_key": "trims/color_palettes/trim_palette",
       "permutations": {

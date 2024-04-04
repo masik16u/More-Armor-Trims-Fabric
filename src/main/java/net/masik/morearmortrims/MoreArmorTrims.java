@@ -1,7 +1,6 @@
 package net.masik.morearmortrims;
 
 import net.fabricmc.api.ModInitializer;
-import net.masik.morearmortrims.item.ModItemGroup;
 import net.masik.morearmortrims.item.ModItems;
 import net.masik.morearmortrims.util.ModLootTableModifiers;
 import net.masik.morearmortrims.util.ModRegistries;
@@ -14,8 +13,9 @@ public class MoreArmorTrims implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		LOGGER.info("[Mythic Charms] Initializing...");
+
 		ModItems.registerModItems();
-		ModItemGroup.registerItemGroups();
 		ModLootTableModifiers.modifyLootTables();
 		ModRegistries.registerRegistries();
 	}

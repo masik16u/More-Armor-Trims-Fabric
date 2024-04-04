@@ -13,10 +13,13 @@
           "condition": "minecraft:entity_properties",
           "entity": "this",
           "predicate": {
-            "passenger": {
-              "type": "minecraft:evoker"
+            "vehicle": {
+              "type": "minecraft:ravager"
             }
           }
+        },
+        {
+          "condition": "minecraft:killed_by_player"
         }
       ]
     }
