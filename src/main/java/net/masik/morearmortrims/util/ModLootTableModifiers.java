@@ -33,11 +33,9 @@ public class ModLootTableModifiers {
             LootTable table = manager.getLootTable(buildAddInjectionRoute(id));
             if (table != LootTable.EMPTY) {
 
-                LootPool[] pools = table.pools;
+                LootPool[] pools = table.pools.toArray(new LootPool[0]);
 
-                if (pools != null)
-
-                    supplyPools(supplier, pools);
+                supplyPools(supplier, pools);
 
             }
 
@@ -47,8 +45,16 @@ public class ModLootTableModifiers {
 
             LootTable table = lootManager.getLootTable(buildReplaceInjectionRoute(id));
             if (table != LootTable.EMPTY) {
-                List<LootPoolEntry> entries = new ArrayList<>(Arrays.asList(original.pools[0].entries));
-                Collections.addAll(entries, table.pools[0].entries);
+
+                LootPool[] pools = table.pools.toArray(new LootPool[0]);
+                LootPool[] originalPools = original.pools.toArray(new LootPool[0]);
+
+                List<LootPoolEntry> originalEntries = originalPools[0].entries;
+                List<LootPoolEntry> tableEntries = pools[0].entries;
+
+                List<LootPoolEntry> entries = new ArrayList<>();
+                entries.addAll(originalEntries);
+                entries.addAll(tableEntries);
 
                 LootPool.Builder pool = LootPool.builder().with(entries);
                 return LootTable.builder().pool(pool).build();
