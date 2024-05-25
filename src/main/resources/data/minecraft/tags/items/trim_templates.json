@@ -1,4 +1,5 @@
 {
+  "replace": false,
   "values": [
     "minecraft:ward_armor_trim_smithing_template",
     "minecraft:spire_armor_trim_smithing_template",
