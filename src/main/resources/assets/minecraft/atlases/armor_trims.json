@@ -18,7 +18,11 @@
         "more_armor_trims:trims/models/armor/wraith",
         "more_armor_trims:trims/models/armor/wraith_leggings",
         "more_armor_trims:trims/models/armor/nihility",
-        "more_armor_trims:trims/models/armor/nihility_leggings"
+        "more_armor_trims:trims/models/armor/nihility_leggings",
+        "more_armor_trims:trims/models/armor/horizon",
+        "more_armor_trims:trims/models/armor/horizon_leggings",
+        "more_armor_trims:trims/models/armor/origin",
+        "more_armor_trims:trims/models/armor/origin_leggings"
       ],
       "palette_key": "trims/color_palettes/trim_palette",
       "permutations": {
