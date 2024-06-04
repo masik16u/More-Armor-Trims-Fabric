@@ -7,6 +7,8 @@
   "item.more_armor_trims.fever_armor_trim_smithing_template": "鍛冶型",
   "item.more_armor_trims.wraith_armor_trim_smithing_template": "鍛冶型",
   "item.more_armor_trims.nihility_armor_trim_smithing_template": "鍛冶型",
+  "item.more_armor_trims.horizon_armor_trim_smithing_template": "鍛冶型",
+  "item.more_armor_trims.origin_armor_trim_smithing_template": "鍛冶型",
   "trim_pattern.more_armor_trims.storm_armor_trim_smithing_template": "暴風の装飾",
   "trim_pattern.more_armor_trims.ram_armor_trim_smithing_template": "激突風の装飾",
   "trim_pattern.more_armor_trims.myth_armor_trim_smithing_template": "神話風の装飾",
@@ -15,6 +17,8 @@
   "trim_pattern.more_armor_trims.fever_armor_trim_smithing_template": "熱狂風の装飾",
   "trim_pattern.more_armor_trims.wraith_armor_trim_smithing_template": "亡霊風の装飾",
   "trim_pattern.more_armor_trims.nihility_armor_trim_smithing_template": "虚無風の装飾",
+  "trim_pattern.more_armor_trims.horizon_armor_trim_smithing_template": "地平線風の装飾",
+  "trim_pattern.more_armor_trims.origin_armor_trim_smithing_template": "起源風の装飾",
 
   "advancements.adventure.trim_with_all_armor_patterns.title": "フルカードコレクション",
   "advancements.adventure.trim_with_all_armor_patterns.description": "すべての防具装飾を、それぞれ最低一回以上施す"

@@ -1,0 +1,13 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "more_armor_trims:horizon_armor_trim_smithing_template"
+        }
+      ]
+    }
+  ]
+}

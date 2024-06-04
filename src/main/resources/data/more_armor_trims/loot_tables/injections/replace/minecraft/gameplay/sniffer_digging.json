@@ -1,0 +1,21 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "more_armor_trims:origin_armor_trim_smithing_template",
+          "conditions": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "biome": "minecraft:old_growth_spruce_taiga"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
