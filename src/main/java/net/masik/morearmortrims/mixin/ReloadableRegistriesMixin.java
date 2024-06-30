@@ -7,11 +7,8 @@ import net.minecraft.registry.DynamicRegistryManager;
 import net.minecraft.registry.MutableRegistry;
 import net.minecraft.registry.RegistryEntryLookup;
 import net.minecraft.registry.ReloadableRegistries;
-import net.minecraft.registry.entry.RegistryEntryInfo;
 import net.minecraft.util.Identifier;
-import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
@@ -23,9 +20,6 @@ import java.util.concurrent.CompletableFuture;
 public class ReloadableRegistriesMixin {
 	@Unique
 	private static final Identifier LOOT_TABLE_ID = Identifier.ofVanilla("loot_table");
-	@Shadow
-	@Final
-	private static RegistryEntryInfo DEFAULT_REGISTRY_ENTRY_INFO;
 
 	@SuppressWarnings("unchecked")
 	@ModifyArg(method = "reload", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Util;combineSafe(Ljava/util/List;)Ljava/util/concurrent/CompletableFuture;"), require = 0)
@@ -37,7 +31,7 @@ public class ReloadableRegistriesMixin {
 		for (CompletableFuture<MutableRegistry<?>> future : futures)
 			future.thenApplyAsync(registry -> {
 				if (LOOT_TABLE_ID.equals(registry.getKey().getValue()))
-					ModLootTableModifiers.modify((MutableRegistry<LootTable>) registry, lookup, DEFAULT_REGISTRY_ENTRY_INFO);
+					ModLootTableModifiers.modify((MutableRegistry<LootTable>) registry, lookup);
 				return registry;
 			});
 		return futures;
