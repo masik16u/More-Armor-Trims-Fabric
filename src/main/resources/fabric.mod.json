@@ -1,35 +1,43 @@
 {
-  "schemaVersion": 1,
-  "id": "more_armor_trims",
-  "version": "${version}",
-
-  "name": "More Armor Trims",
-  "description": "Adds new armor trims",
-  "authors": [
-    "Masik16u"
-  ],
-  "contact": {
-    "homepage": "https://github.com/masik16u/More-Armor-Trims-Fabric"
-  },
-
-  "license": "GNU General Public License v3.0",
-  "icon": "assets/more_armor_trims/icon.png",
-  "accessWidener": "more_armor_trims.accesswidener",
-
-  "environment": "*",
-  "entrypoints": {
-    "main": [
-      "net.masik.morearmortrims.MoreArmorTrims"
-    ]
-  },
-  "mixins": [
-    "more_armor_trims.mixins.json"
-  ],
-
-  "depends": {
-    "fabricloader": ">=0.15.2",
-    "fabric-api": "*",
-    "minecraft": ">=1.20",
-    "java": ">=17"
-  }
+	"schemaVersion": 1,
+	"id": "more_armor_trims",
+	"version": "${version}",
+	"name": "More Armor Trims",
+	"description": "Adds new armor trims",
+	"authors": [
+		"Masik16u"
+	],
+	"contact": {
+		"homepage": "https://github.com/masik16u/More-Armor-Trims-Fabric"
+	},
+	"license": "GNU General Public License v3.0",
+	"icon": "assets/more_armor_trims/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "net.masik.morearmortrims.MoreArmorTrims"
+		],
+		"client": [
+			"net.masik.morearmortrims.MoreArmorTrimsClient"
+		],
+		"fabric-datagen": [
+			"net.masik.morearmortrims.MoreArmorTrimsDataGenerator"
+		]
+	},
+	"mixins": [
+		"more_armor_trims.mixins.json",
+		{
+			"config": "more_armor_trims.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
 }
