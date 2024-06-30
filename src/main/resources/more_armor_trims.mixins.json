@@ -3,7 +3,7 @@
 	"package": "net.masik.morearmortrims.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-
+		"ReloadableRegistriesMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
