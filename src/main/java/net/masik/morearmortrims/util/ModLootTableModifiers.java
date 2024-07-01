@@ -12,6 +12,7 @@ import net.fabricmc.fabric.api.loot.v2.LootTableSource;
 import net.fabricmc.fabric.impl.biome.modification.BuiltInRegistryKeys;
 import net.fabricmc.fabric.mixin.loot.LootTableAccessor;
 import net.masik.morearmortrims.MoreArmorTrims;
+import net.masik.morearmortrims.mixin.RegistryEntryAccessor;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.loottable.LootTableGenerator;
 import net.minecraft.data.server.loottable.LootTableProvider;
@@ -160,15 +161,16 @@ public class ModLootTableModifiers {
 
 	public static void modify(
 			MutableRegistry<LootTable> registry,
-			RegistryEntryLookup.RegistryLookup lookup,
-			RegistryEntryInfo info
+			RegistryEntryLookup.RegistryLookup lookup
 	) {
 		BiConsumer<RegistryKey<LootTable>, Function<LootTable.Builder, LootTable>> modifier = (RegistryKey<LootTable> key, Function<LootTable.Builder, LootTable> consumer) -> {
 			LootTable table = registry.get(key);
 			if (table == null || table == LootTable.EMPTY) return;
 			LootTable.Builder builder = FabricLootTableBuilder.copyOf(table);
 			LootTable modified = consumer.apply(builder);
-			registry.add(key, modified, info);
+
+			RegistryEntry<LootTable> reference = registry.entryOf(key);
+			((RegistryEntryAccessor<LootTable>) reference).setValue(modified);
 		};
 
 		// Sample
