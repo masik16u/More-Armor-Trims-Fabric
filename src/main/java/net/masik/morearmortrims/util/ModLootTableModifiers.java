@@ -6,7 +6,6 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricAdvancementProvider;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLootTableProvider;
-import net.fabricmc.fabric.api.loot.v2.FabricLootTableBuilder;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.fabricmc.fabric.api.loot.v2.LootTableSource;
 import net.fabricmc.fabric.impl.biome.modification.BuiltInRegistryKeys;
@@ -33,7 +32,6 @@ import net.minecraft.predicate.entity.LocationPredicate;
 import net.minecraft.predicate.item.ItemPredicate;
 import net.minecraft.registry.*;
 import net.minecraft.registry.entry.RegistryEntry;
-import net.minecraft.registry.entry.RegistryEntryInfo;
 import net.minecraft.registry.entry.RegistryEntryList;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
@@ -45,8 +43,6 @@ import net.minecraft.world.gen.structure.Structure;
 import net.minecraft.world.gen.structure.StructureKeys;
 
 import java.util.*;
-import java.util.function.BiConsumer;
-import java.util.function.Function;
 
 public class ModLootTableModifiers {
 
@@ -158,22 +154,4 @@ public class ModLootTableModifiers {
 //        });
     }
 
-	public static void modify(
-			MutableRegistry<LootTable> registry,
-			RegistryEntryLookup.RegistryLookup lookup,
-			RegistryEntryInfo info
-	) {
-		BiConsumer<RegistryKey<LootTable>, Function<LootTable.Builder, LootTable>> modifier = (RegistryKey<LootTable> key, Function<LootTable.Builder, LootTable> consumer) -> {
-			LootTable table = registry.get(key);
-			if (table == null || table == LootTable.EMPTY) return;
-			LootTable.Builder builder = FabricLootTableBuilder.copyOf(table);
-			LootTable modified = consumer.apply(builder);
-			registry.add(key, modified, info);
-		};
-
-		// Sample
-		modifier.accept(Blocks.CHEST.getLootTableKey(), (builder) -> {
-			return builder.build();
-		});
-	}
 }
