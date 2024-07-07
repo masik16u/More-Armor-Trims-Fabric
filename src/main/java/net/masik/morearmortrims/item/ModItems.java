@@ -3,12 +3,16 @@ package net.masik.morearmortrims.item;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.masik.morearmortrims.MoreArmorTrims;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.item.Items;
 import net.minecraft.item.SmithingTemplateItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ModItems {
 
@@ -35,7 +39,7 @@ public class ModItems {
 
     private static void addItemsToIngredientsTabGroup(FabricItemGroupEntries entries) {
 
-        entries.addAfter(Items.SPIRE_ARMOR_TRIM_SMITHING_TEMPLATE, STORM_ARMOR_TRIM_SMITHING_TEMPLATE);
+        entries.addAfter(Items.BOLT_ARMOR_TRIM_SMITHING_TEMPLATE, STORM_ARMOR_TRIM_SMITHING_TEMPLATE);
         entries.addAfter(STORM_ARMOR_TRIM_SMITHING_TEMPLATE, RAM_ARMOR_TRIM_SMITHING_TEMPLATE);
         entries.addAfter(RAM_ARMOR_TRIM_SMITHING_TEMPLATE, MYTH_ARMOR_TRIM_SMITHING_TEMPLATE);
         entries.addAfter(MYTH_ARMOR_TRIM_SMITHING_TEMPLATE, GREED_ARMOR_TRIM_SMITHING_TEMPLATE);

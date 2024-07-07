@@ -28,6 +28,7 @@ loom {
 		}
 	}
 
+	accessWidenerPath = file("src/main/resources/more_armor_trims.accesswidener")
 }
 
 fabricApi {

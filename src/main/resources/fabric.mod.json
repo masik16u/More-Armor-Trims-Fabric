@@ -12,6 +12,7 @@
 	},
 	"license": "GNU General Public License v3.0",
 	"icon": "assets/more_armor_trims/icon.png",
+	"accessWidener": "more_armor_trims.accesswidener",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
@@ -36,8 +37,5 @@
 		"minecraft": "~1.21",
 		"java": ">=21",
 		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
 	}
 }

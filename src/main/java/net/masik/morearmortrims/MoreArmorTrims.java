@@ -4,6 +4,8 @@ import net.fabricmc.api.ModInitializer;
 
 import net.masik.morearmortrims.item.ModItems;
 import net.masik.morearmortrims.util.ModLootTableModifiers;
+import net.masik.morearmortrims.util.TrimHelper;
+import net.minecraft.item.Item;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,6 +20,5 @@ public class MoreArmorTrims implements ModInitializer {
 
 		ModLootTableModifiers.modifyLootTables();
 
-		LOGGER.info("Hello Fabric world!");
 	}
 }
