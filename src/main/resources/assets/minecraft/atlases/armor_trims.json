@@ -22,7 +22,17 @@
         "more_armor_trims:trims/models/armor/horizon",
         "more_armor_trims:trims/models/armor/horizon_leggings",
         "more_armor_trims:trims/models/armor/origin",
-        "more_armor_trims:trims/models/armor/origin_leggings"
+        "more_armor_trims:trims/models/armor/origin_leggings",
+        "more_armor_trims:trims/shield/storm",
+        "more_armor_trims:trims/shield/ram",
+        "more_armor_trims:trims/shield/myth",
+        "more_armor_trims:trims/shield/greed",
+        "more_armor_trims:trims/shield/beast",
+        "more_armor_trims:trims/shield/fever",
+        "more_armor_trims:trims/shield/wraith",
+        "more_armor_trims:trims/shield/nihility",
+        "more_armor_trims:trims/shield/horizon",
+        "more_armor_trims:trims/shield/origin"
       ],
       "palette_key": "trims/color_palettes/trim_palette",
       "permutations": {

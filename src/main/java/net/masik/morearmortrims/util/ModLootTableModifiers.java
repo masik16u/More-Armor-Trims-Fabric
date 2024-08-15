@@ -38,8 +38,11 @@ public class ModLootTableModifiers {
                 LootPool.Builder lootPool = LootPool.builder()
                         .with(ItemEntry.builder(ModItems.GREED_ARMOR_TRIM_SMITHING_TEMPLATE))
                         .conditionally(RandomChanceLootCondition.builder(0.3f))
-                        .conditionally(LocationCheckLootCondition.builder(LocationPredicate.Builder
-                                .createBiome(registries.getWrapperOrThrow(RegistryKeys.BIOME).getOrThrow(BiomeKeys.BADLANDS))));
+                        .conditionally(AnyOfLootCondition.builder(
+                                LocationCheckLootCondition.builder(LocationPredicate.Builder.createBiome(registries.getWrapperOrThrow(RegistryKeys.BIOME).getOrThrow(BiomeKeys.BADLANDS))),
+                                LocationCheckLootCondition.builder(LocationPredicate.Builder.createBiome(registries.getWrapperOrThrow(RegistryKeys.BIOME).getOrThrow(BiomeKeys.ERODED_BADLANDS))),
+                                LocationCheckLootCondition.builder(LocationPredicate.Builder.createBiome(registries.getWrapperOrThrow(RegistryKeys.BIOME).getOrThrow(BiomeKeys.WOODED_BADLANDS)))
+                        ));
 
                 builder.pool(lootPool);
 
