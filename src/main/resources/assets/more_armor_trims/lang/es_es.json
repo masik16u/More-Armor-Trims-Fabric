@@ -1,0 +1,25 @@
+{
+  "item.more_armor_trims.storm_armor_trim_smithing_template": "Molde de Herrería",
+  "item.more_armor_trims.ram_armor_trim_smithing_template": "Molde de Herrería",
+  "item.more_armor_trims.myth_armor_trim_smithing_template": "Molde de Herrería",
+  "item.more_armor_trims.greed_armor_trim_smithing_template": "Molde de Herrería",
+  "item.more_armor_trims.beast_armor_trim_smithing_template": "Molde de Herrería",
+  "item.more_armor_trims.fever_armor_trim_smithing_template": "Molde de Herrería",
+  "item.more_armor_trims.wraith_armor_trim_smithing_template": "Molde de Herrería",
+  "item.more_armor_trims.nihility_armor_trim_smithing_template": "Molde de Herrería",
+  "item.more_armor_trims.horizon_armor_trim_smithing_template": "Molde de Herrería",
+  "item.more_armor_trims.origin_armor_trim_smithing_template": "Molde de Herrería",
+  "trim_pattern.more_armor_trims.storm_armor_trim_smithing_template": "Diseño de Armadura de Tormenta",
+  "trim_pattern.more_armor_trims.ram_armor_trim_smithing_template": "Diseño de Armadura de Ariete",
+  "trim_pattern.more_armor_trims.myth_armor_trim_smithing_template": "Diseño de Armadura de Mito",
+  "trim_pattern.more_armor_trims.greed_armor_trim_smithing_template": "Diseño de Armadura de Codicia",
+  "trim_pattern.more_armor_trims.beast_armor_trim_smithing_template": "Diseño de Armadura de Bestia",
+  "trim_pattern.more_armor_trims.fever_armor_trim_smithing_template": "Diseño de Armadura de Fiebre",
+  "trim_pattern.more_armor_trims.wraith_armor_trim_smithing_template": "Diseño de Armadura de Espíritu",
+  "trim_pattern.more_armor_trims.nihility_armor_trim_smithing_template": "Diseño de Armadura de Nihilidad",
+  "trim_pattern.more_armor_trims.horizon_armor_trim_smithing_template": "Diseño de Armadura de Horizonte",
+  "trim_pattern.more_armor_trims.origin_armor_trim_smithing_template": "Diseño de Armadura de Origen",
+
+  "advancements.adventure.trim_with_all_armor_patterns.title": "Colección de Cartas Completa",
+  "advancements.adventure.trim_with_all_armor_patterns.description": "Aplica cada molde de herrería al menos una vez"
+}
