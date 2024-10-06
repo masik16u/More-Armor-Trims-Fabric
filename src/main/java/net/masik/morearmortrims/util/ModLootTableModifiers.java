@@ -7,9 +7,8 @@ import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.condition.*;
 import net.minecraft.loot.context.LootContext;
-import net.minecraft.loot.entry.ItemEntry;
-import net.minecraft.predicate.entity.EntityPredicate;
-import net.minecraft.predicate.entity.LocationPredicate;
+import net.minecraft.loot.entry.*;
+import net.minecraft.predicate.entity.*;
 import net.minecraft.registry.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
@@ -20,20 +19,21 @@ import java.util.*;
 public class ModLootTableModifiers {
 
     public static void modifyLootTables() {
-        LootTableEvents.MODIFY.register((id, builder, source, registries) -> {
 
-            if (id == RegistryKey.of(RegistryKeys.LOOT_TABLE, Identifier.of("blocks/spawner"))) {
+        LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
+
+            if (key == RegistryKey.of(RegistryKeys.LOOT_TABLE, Identifier.of("blocks/spawner"))) {
 
                 LootPool.Builder lootPool = LootPool.builder()
                         .with(ItemEntry.builder(ModItems.NIHILITY_ARMOR_TRIM_SMITHING_TEMPLATE))
                         .conditionally(RandomChanceLootCondition.builder(0.3f))
                         .conditionally(LocationCheckLootCondition.builder(LocationPredicate.Builder.createDimension(World.OVERWORLD)));
 
-                builder.pool(lootPool);
+                tableBuilder.pool(lootPool);
 
             }
 
-            if (id == RegistryKey.of(RegistryKeys.LOOT_TABLE, Identifier.of("chests/abandoned_mineshaft"))) {
+            if (key == RegistryKey.of(RegistryKeys.LOOT_TABLE, Identifier.of("chests/abandoned_mineshaft"))) {
 
                 LootPool.Builder lootPool = LootPool.builder()
                         .with(ItemEntry.builder(ModItems.GREED_ARMOR_TRIM_SMITHING_TEMPLATE))
@@ -44,32 +44,32 @@ public class ModLootTableModifiers {
                                 LocationCheckLootCondition.builder(LocationPredicate.Builder.createBiome(registries.getWrapperOrThrow(RegistryKeys.BIOME).getOrThrow(BiomeKeys.WOODED_BADLANDS)))
                         ));
 
-                builder.pool(lootPool);
+                tableBuilder.pool(lootPool);
 
             }
 
-            if (id == RegistryKey.of(RegistryKeys.LOOT_TABLE, Identifier.of("chests/igloo_chest"))) {
+            if (key == RegistryKey.of(RegistryKeys.LOOT_TABLE, Identifier.of("chests/igloo_chest"))) {
 
                 LootPool.Builder lootPool = LootPool.builder()
                         .with(ItemEntry.builder(ModItems.BEAST_ARMOR_TRIM_SMITHING_TEMPLATE))
                         .conditionally(RandomChanceLootCondition.builder(0.5f));
 
-                builder.pool(lootPool);
+                tableBuilder.pool(lootPool);
 
             }
 
-            if (id == RegistryKey.of(RegistryKeys.LOOT_TABLE, Identifier.of("chests/ruined_portal"))) {
+            if (key == RegistryKey.of(RegistryKeys.LOOT_TABLE, Identifier.of("chests/ruined_portal"))) {
 
                 LootPool.Builder lootPool = LootPool.builder()
                         .with(ItemEntry.builder(ModItems.FEVER_ARMOR_TRIM_SMITHING_TEMPLATE))
                         .conditionally(RandomChanceLootCondition.builder(0.2f))
                         .conditionally(LocationCheckLootCondition.builder(LocationPredicate.Builder.createDimension(World.NETHER)));
 
-                builder.pool(lootPool);
+                tableBuilder.pool(lootPool);
 
             }
 
-            if (id == RegistryKey.of(RegistryKeys.LOOT_TABLE, Identifier.of("entities/evoker"))) {
+            if (key == RegistryKey.of(RegistryKeys.LOOT_TABLE, Identifier.of("entities/evoker"))) {
 
                 LootPool.Builder lootPool = LootPool.builder()
                         .with(ItemEntry.builder(ModItems.RAM_ARMOR_TRIM_SMITHING_TEMPLATE))
@@ -77,11 +77,11 @@ public class ModLootTableModifiers {
                                 EntityPredicate.Builder.create().vehicle(EntityPredicate.Builder.create().type(EntityType.RAVAGER))))
                         .conditionally(KilledByPlayerLootCondition.builder());
 
-                builder.pool(lootPool);
+                tableBuilder.pool(lootPool);
 
             }
 
-            if (id == RegistryKey.of(RegistryKeys.LOOT_TABLE, Identifier.of("entities/ravager"))) {
+            if (key == RegistryKey.of(RegistryKeys.LOOT_TABLE, Identifier.of("entities/ravager"))) {
 
                 LootPool.Builder lootPool = LootPool.builder()
                         .with(ItemEntry.builder(ModItems.RAM_ARMOR_TRIM_SMITHING_TEMPLATE))
@@ -89,11 +89,11 @@ public class ModLootTableModifiers {
                                 EntityPredicate.Builder.create().passenger(EntityPredicate.Builder.create().type(EntityType.EVOKER))))
                         .conditionally(KilledByPlayerLootCondition.builder());
 
-                builder.pool(lootPool);
+                tableBuilder.pool(lootPool);
 
             }
 
-            if (id == RegistryKey.of(RegistryKeys.LOOT_TABLE, Identifier.of("entities/wither"))) {
+            if (key == RegistryKey.of(RegistryKeys.LOOT_TABLE, Identifier.of("entities/wither"))) {
 
                 LootPool.Builder lootPool = LootPool.builder()
                         .with(ItemEntry.builder(ModItems.WRAITH_ARMOR_TRIM_SMITHING_TEMPLATE))
@@ -101,15 +101,15 @@ public class ModLootTableModifiers {
                         .conditionally(LocationCheckLootCondition.builder(LocationPredicate.Builder
                                 .createBiome(registries.getWrapperOrThrow(RegistryKeys.BIOME).getOrThrow(BiomeKeys.SOUL_SAND_VALLEY))));
 
-                builder.pool(lootPool);
+                tableBuilder.pool(lootPool);
 
             }
 
         });
 
-        LootTableEvents.REPLACE.register((id, original, source, registries) -> {
+        LootTableEvents.REPLACE.register((key, original, source, registries) -> {
 
-            if (id == RegistryKey.of(RegistryKeys.LOOT_TABLE, Identifier.of("archaeology/ocean_ruin_cold"))) {
+            if (key == RegistryKey.of(RegistryKeys.LOOT_TABLE, Identifier.of("archaeology/ocean_ruin_cold"))) {
 
                 LootPool.Builder lootPool = LootPool.builder()
                         .with(ItemEntry.builder(ModItems.HORIZON_ARMOR_TRIM_SMITHING_TEMPLATE));
@@ -118,7 +118,7 @@ public class ModLootTableModifiers {
 
             }
 
-            if (id == RegistryKey.of(RegistryKeys.LOOT_TABLE, Identifier.of("gameplay/fishing/treasure"))) {
+            if (key == RegistryKey.of(RegistryKeys.LOOT_TABLE, Identifier.of("gameplay/fishing/treasure"))) {
 
                 LootPool.Builder lootPool = LootPool.builder()
                         .with(ItemEntry.builder(ModItems.STORM_ARMOR_TRIM_SMITHING_TEMPLATE)
@@ -129,7 +129,7 @@ public class ModLootTableModifiers {
 
             }
 
-            if (id == RegistryKey.of(RegistryKeys.LOOT_TABLE, Identifier.of("gameplay/sniffer_digging"))) {
+            if (key == RegistryKey.of(RegistryKeys.LOOT_TABLE, Identifier.of("gameplay/sniffer_digging"))) {
 
                 LootPool.Builder lootPool = LootPool.builder()
                         .with(ItemEntry.builder(ModItems.ORIGIN_ARMOR_TRIM_SMITHING_TEMPLATE)
