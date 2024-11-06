@@ -1,0 +1,83 @@
+{
+  "parent": "minecraft:adventure/root",
+  "criteria": {
+    "armor_trimmed_more_armor_trims:storm_armor_trim_smithing_template_smithing_trim": {
+      "conditions": {
+        "recipe_id": "more_armor_trims:storm_armor_trim_smithing_template_smithing_trim"
+      },
+      "trigger": "minecraft:recipe_crafted"
+    },
+    "armor_trimmed_more_armor_trims:ram_armor_trim_smithing_template_smithing_trim": {
+      "conditions": {
+        "recipe_id": "more_armor_trims:ram_armor_trim_smithing_template_smithing_trim"
+      },
+      "trigger": "minecraft:recipe_crafted"
+    },
+    "armor_trimmed_more_armor_trims:myth_armor_trim_smithing_template_smithing_trim": {
+      "conditions": {
+        "recipe_id": "more_armor_trims:myth_armor_trim_smithing_template_smithing_trim"
+      },
+      "trigger": "minecraft:recipe_crafted"
+    },
+    "armor_trimmed_more_armor_trims:greed_armor_trim_smithing_template_smithing_trim": {
+      "conditions": {
+        "recipe_id": "more_armor_trims:greed_armor_trim_smithing_template_smithing_trim"
+      },
+      "trigger": "minecraft:recipe_crafted"
+    },
+    "armor_trimmed_more_armor_trims:beast_armor_trim_smithing_template_smithing_trim": {
+      "conditions": {
+        "recipe_id": "more_armor_trims:beast_armor_trim_smithing_template_smithing_trim"
+      },
+      "trigger": "minecraft:recipe_crafted"
+    },
+    "armor_trimmed_more_armor_trims:fever_armor_trim_smithing_template_smithing_trim": {
+      "conditions": {
+        "recipe_id": "more_armor_trims:fever_armor_trim_smithing_template_smithing_trim"
+      },
+      "trigger": "minecraft:recipe_crafted"
+    },
+    "armor_trimmed_more_armor_trims:wraith_armor_trim_smithing_template_smithing_trim": {
+      "conditions": {
+        "recipe_id": "more_armor_trims:wraith_armor_trim_smithing_template_smithing_trim"
+      },
+      "trigger": "minecraft:recipe_crafted"
+    },
+    "armor_trimmed_more_armor_trims:nihility_armor_trim_smithing_template_smithing_trim": {
+      "conditions": {
+        "recipe_id": "more_armor_trims:nihility_armor_trim_smithing_template_smithing_trim"
+      },
+      "trigger": "minecraft:recipe_crafted"
+    },
+    "armor_trimmed_more_armor_trims:horizon_armor_trim_smithing_template_smithing_trim": {
+      "conditions": {
+        "recipe_id": "more_armor_trims:horizon_armor_trim_smithing_template_smithing_trim"
+      },
+      "trigger": "minecraft:recipe_crafted"
+    },
+    "armor_trimmed_more_armor_trims:origin_armor_trim_smithing_template_smithing_trim": {
+      "conditions": {
+        "recipe_id": "more_armor_trims:origin_armor_trim_smithing_template_smithing_trim"
+      },
+      "trigger": "minecraft:recipe_crafted"
+    }
+  },
+  "requirements": [
+    [
+      "armor_trimmed_more_armor_trims:storm_armor_trim_smithing_template_smithing_trim",
+      "armor_trimmed_more_armor_trims:ram_armor_trim_smithing_template_smithing_trim",
+      "armor_trimmed_more_armor_trims:myth_armor_trim_smithing_template_smithing_trim",
+      "armor_trimmed_more_armor_trims:greed_armor_trim_smithing_template_smithing_trim",
+      "armor_trimmed_more_armor_trims:beast_armor_trim_smithing_template_smithing_trim",
+      "armor_trimmed_more_armor_trims:fever_armor_trim_smithing_template_smithing_trim",
+      "armor_trimmed_more_armor_trims:wraith_armor_trim_smithing_template_smithing_trim",
+      "armor_trimmed_more_armor_trims:nihility_armor_trim_smithing_template_smithing_trim",
+      "armor_trimmed_more_armor_trims:horizon_armor_trim_smithing_template_smithing_trim",
+      "armor_trimmed_more_armor_trims:origin_armor_trim_smithing_template_smithing_trim"
+    ]
+  ],
+  "sends_telemetry_event": true,
+  "rewards": {
+    "function": "more_armor_trims:grant_trim_with_any_armor_pattern"
+  }
+}
