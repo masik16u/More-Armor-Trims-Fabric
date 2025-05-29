@@ -2,5 +2,6 @@
   "type": "minecraft:smithing_trim",
   "addition": "#minecraft:trim_materials",
   "base": "#minecraft:trimmable_armor",
+  "pattern": "more_armor_trims:origin",
   "template": "more_armor_trims:origin_armor_trim_smithing_template"
 }

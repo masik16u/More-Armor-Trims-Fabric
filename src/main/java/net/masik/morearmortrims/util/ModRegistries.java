@@ -5,6 +5,7 @@ import net.masik.morearmortrims.item.ModItems;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.village.TradeOffer;
+import net.minecraft.village.TradeOffers;
 import net.minecraft.village.TradedItem;
 
 public class ModRegistries {
@@ -14,11 +15,12 @@ public class ModRegistries {
     }
 
     private static void registerCustomWanderingTrades() {
-        TradeOfferHelper.registerWanderingTraderOffers(1, factories -> {
-            factories.add((entity, random) -> new TradeOffer(
-                    new TradedItem(Items.EMERALD, 15),
-                    new ItemStack(ModItems.MYTH_ARMOR_TRIM_SMITHING_TEMPLATE, 1),
-                    2, 0, 0));
+        TradeOfferHelper.registerWanderingTraderOffers(wanderingTraderOffersBuilder -> {
+            wanderingTraderOffersBuilder.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_SPECIAL_ITEMS_POOL,
+                    (entity, random) -> new TradeOffer(
+                            new TradedItem(Items.EMERALD, 15),
+                            new ItemStack(ModItems.MYTH_ARMOR_TRIM_SMITHING_TEMPLATE, 1),
+                            2, 0, 0));
         });
     }
 

@@ -1,8 +1,11 @@
 package net.masik.morearmortrims.util;
 
 import net.masik.morearmortrims.item.ModItems;
+import net.masik.morearmortrims.trim.ModTrimPatterns;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
+import net.minecraft.item.equipment.trim.ArmorTrimPattern;
+import net.minecraft.registry.RegistryKey;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +23,19 @@ public class TrimHelper {
         add(ModItems.NIHILITY_ARMOR_TRIM_SMITHING_TEMPLATE);
         add(ModItems.HORIZON_ARMOR_TRIM_SMITHING_TEMPLATE);
         add(ModItems.ORIGIN_ARMOR_TRIM_SMITHING_TEMPLATE);
+    }};
+
+    public static final List<RegistryKey<ArmorTrimPattern>> TRIM_PATTERNS = new ArrayList<>() {{
+        add(ModTrimPatterns.STORM);
+        add(ModTrimPatterns.RAM);
+        add(ModTrimPatterns.MYTH);
+        add(ModTrimPatterns.GREED);
+        add(ModTrimPatterns.BEAST);
+        add(ModTrimPatterns.FEVER);
+        add(ModTrimPatterns.WRAITH);
+        add(ModTrimPatterns.NIHILITY);
+        add(ModTrimPatterns.HORIZON);
+        add(ModTrimPatterns.ORIGIN);
     }};
 
     public static final List<Item> TRIM_MATERIALS = new ArrayList<>() {{
