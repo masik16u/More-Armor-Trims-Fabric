@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "minecraft:diamond"
-    },
-    "C": {
-      "item": "minecraft:netherrack"
-    },
-    "S": {
-      "item": "more_armor_trims:fever_armor_trim_smithing_template"
-    }
+    "#": "minecraft:diamond",
+    "C": "minecraft:netherrack",
+    "S": "more_armor_trims:fever_armor_trim_smithing_template"
   },
   "pattern": [
     "#S#",

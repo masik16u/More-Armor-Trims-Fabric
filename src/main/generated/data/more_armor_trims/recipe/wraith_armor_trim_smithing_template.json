@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "minecraft:diamond"
-    },
-    "C": {
-      "item": "minecraft:soul_soil"
-    },
-    "S": {
-      "item": "more_armor_trims:wraith_armor_trim_smithing_template"
-    }
+    "#": "minecraft:diamond",
+    "C": "minecraft:soul_soil",
+    "S": "more_armor_trims:wraith_armor_trim_smithing_template"
   },
   "pattern": [
     "#S#",

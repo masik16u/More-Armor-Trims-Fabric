@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "minecraft:diamond"
-    },
-    "C": {
-      "item": "minecraft:red_sandstone"
-    },
-    "S": {
-      "item": "more_armor_trims:greed_armor_trim_smithing_template"
-    }
+    "#": "minecraft:diamond",
+    "C": "minecraft:red_sandstone",
+    "S": "more_armor_trims:greed_armor_trim_smithing_template"
   },
   "pattern": [
     "#S#",

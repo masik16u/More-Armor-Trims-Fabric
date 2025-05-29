@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "minecraft:diamond"
-    },
-    "C": {
-      "item": "minecraft:moss_block"
-    },
-    "S": {
-      "item": "more_armor_trims:origin_armor_trim_smithing_template"
-    }
+    "#": "minecraft:diamond",
+    "C": "minecraft:moss_block",
+    "S": "more_armor_trims:origin_armor_trim_smithing_template"
   },
   "pattern": [
     "#S#",

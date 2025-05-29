@@ -4,7 +4,10 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.masik.morearmortrims.util.TrimHelper;
 import net.minecraft.data.server.recipe.RecipeExporter;
+import net.minecraft.data.server.recipe.RecipeGenerator;
 import net.minecraft.item.Item;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
 
@@ -16,19 +19,27 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     }
 
     @Override
-    public void generate(RecipeExporter exporter) {
+    protected RecipeGenerator getRecipeGenerator(RegistryWrapper.WrapperLookup wrapperLookup, RecipeExporter recipeExporter) {
+        return new RecipeGenerator(wrapperLookup, recipeExporter) {
+            @Override
+            public void generate() {
+                for (int i = 0; i < TrimHelper.SMITHING_TEMPLATES.size(); i++) {
 
-        for (int i = 0; i < TrimHelper.SMITHING_TEMPLATES.size(); i++) {
+                    offerSmithingTemplateCopyingRecipe(TrimHelper.SMITHING_TEMPLATES.get(i), TrimHelper.TRIM_MATERIALS.get(i));
 
-            offerSmithingTemplateCopyingRecipe(exporter, TrimHelper.SMITHING_TEMPLATES.get(i), TrimHelper.TRIM_MATERIALS.get(i));
+                }
 
-        }
+                for (Item item : TrimHelper.SMITHING_TEMPLATES) {
 
-        for (Item item : TrimHelper.SMITHING_TEMPLATES) {
+                    offerSmithingTrimRecipe(item, RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(item.getTranslationKey().substring(22) + "_smithing_trim")));
 
-            offerSmithingTrimRecipe(exporter, item, Identifier.of(item.getTranslationKey().substring(22) + "_smithing_trim"));
+                }
+            }
+        };
+    }
 
-        }
-
+    @Override
+    public String getName() {
+        return "MAT Recipes";
     }
 }

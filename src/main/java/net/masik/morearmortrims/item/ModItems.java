@@ -9,27 +9,31 @@ import net.minecraft.item.Items;
 import net.minecraft.item.SmithingTemplateItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.function.Function;
 
 public class ModItems {
 
-    public static final SmithingTemplateItem STORM_ARMOR_TRIM_SMITHING_TEMPLATE = registerSmithingTemplateItem("storm_armor_trim_smithing_template");
-    public static final SmithingTemplateItem RAM_ARMOR_TRIM_SMITHING_TEMPLATE = registerSmithingTemplateItem("ram_armor_trim_smithing_template");
-    public static final SmithingTemplateItem MYTH_ARMOR_TRIM_SMITHING_TEMPLATE = registerSmithingTemplateItem("myth_armor_trim_smithing_template");
-    public static final SmithingTemplateItem GREED_ARMOR_TRIM_SMITHING_TEMPLATE = registerSmithingTemplateItem("greed_armor_trim_smithing_template");
-    public static final SmithingTemplateItem BEAST_ARMOR_TRIM_SMITHING_TEMPLATE = registerSmithingTemplateItem("beast_armor_trim_smithing_template");
-    public static final SmithingTemplateItem FEVER_ARMOR_TRIM_SMITHING_TEMPLATE = registerSmithingTemplateItem("fever_armor_trim_smithing_template");
-    public static final SmithingTemplateItem WRAITH_ARMOR_TRIM_SMITHING_TEMPLATE = registerSmithingTemplateItem("wraith_armor_trim_smithing_template");
-    public static final SmithingTemplateItem NIHILITY_ARMOR_TRIM_SMITHING_TEMPLATE = registerSmithingTemplateItem("nihility_armor_trim_smithing_template");
-    public static final SmithingTemplateItem HORIZON_ARMOR_TRIM_SMITHING_TEMPLATE = registerSmithingTemplateItem("horizon_armor_trim_smithing_template");
-    public static final SmithingTemplateItem ORIGIN_ARMOR_TRIM_SMITHING_TEMPLATE = registerSmithingTemplateItem("origin_armor_trim_smithing_template");
+    public static final SmithingTemplateItem STORM_ARMOR_TRIM_SMITHING_TEMPLATE = registerSmithingTemplateItem("storm_armor_trim_smithing_template", settings -> SmithingTemplateItem.of(settings.rarity(Rarity.EPIC)));
+    public static final SmithingTemplateItem RAM_ARMOR_TRIM_SMITHING_TEMPLATE = registerSmithingTemplateItem("ram_armor_trim_smithing_template", settings -> SmithingTemplateItem.of(settings.rarity(Rarity.RARE)));
+    public static final SmithingTemplateItem MYTH_ARMOR_TRIM_SMITHING_TEMPLATE = registerSmithingTemplateItem("myth_armor_trim_smithing_template", settings -> SmithingTemplateItem.of(settings.rarity(Rarity.RARE)));
+    public static final SmithingTemplateItem GREED_ARMOR_TRIM_SMITHING_TEMPLATE = registerSmithingTemplateItem("greed_armor_trim_smithing_template", settings -> SmithingTemplateItem.of(settings.rarity(Rarity.UNCOMMON)));
+    public static final SmithingTemplateItem BEAST_ARMOR_TRIM_SMITHING_TEMPLATE = registerSmithingTemplateItem("beast_armor_trim_smithing_template", settings -> SmithingTemplateItem.of(settings.rarity(Rarity.UNCOMMON)));
+    public static final SmithingTemplateItem FEVER_ARMOR_TRIM_SMITHING_TEMPLATE = registerSmithingTemplateItem("fever_armor_trim_smithing_template", settings -> SmithingTemplateItem.of(settings.rarity(Rarity.UNCOMMON)));
+    public static final SmithingTemplateItem WRAITH_ARMOR_TRIM_SMITHING_TEMPLATE = registerSmithingTemplateItem("wraith_armor_trim_smithing_template", settings -> SmithingTemplateItem.of(settings.rarity(Rarity.EPIC)));
+    public static final SmithingTemplateItem NIHILITY_ARMOR_TRIM_SMITHING_TEMPLATE = registerSmithingTemplateItem("nihility_armor_trim_smithing_template", settings -> SmithingTemplateItem.of(settings.rarity(Rarity.RARE)));
+    public static final SmithingTemplateItem HORIZON_ARMOR_TRIM_SMITHING_TEMPLATE = registerSmithingTemplateItem("horizon_armor_trim_smithing_template", settings -> SmithingTemplateItem.of(settings.rarity(Rarity.UNCOMMON)));
+    public static final SmithingTemplateItem ORIGIN_ARMOR_TRIM_SMITHING_TEMPLATE = registerSmithingTemplateItem("origin_armor_trim_smithing_template", settings -> SmithingTemplateItem.of(settings.rarity(Rarity.RARE)));
 
-    private static SmithingTemplateItem registerSmithingTemplateItem(String name) {
+    private static SmithingTemplateItem registerSmithingTemplateItem(String name, Function<Item.Settings, SmithingTemplateItem> function) {
         Identifier id = Identifier.of(MoreArmorTrims.MOD_ID, name);
-        return Registry.register(Registries.ITEM, id, SmithingTemplateItem.of(id));
+        return Registry.register(Registries.ITEM, id,
+                function.apply(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM,
+                        Identifier.of(MoreArmorTrims.MOD_ID, name)))));
     }
 
     public static void registerModItems() {
