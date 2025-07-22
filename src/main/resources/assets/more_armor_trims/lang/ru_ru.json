@@ -1,0 +1,25 @@
+{
+  "trim_pattern.more_armor_trims.storm": "Отделка «Буря»",
+  "trim_pattern.more_armor_trims.ram": "Отделка «Овен»",
+  "trim_pattern.more_armor_trims.myth": "Отделка «Миф»",
+  "trim_pattern.more_armor_trims.greed": "Отделка «Алчность»",
+  "trim_pattern.more_armor_trims.beast": "Отделка «Зверь»",
+  "trim_pattern.more_armor_trims.fever": "Отделка «Жар»",
+  "trim_pattern.more_armor_trims.wraith": "Отделка «Призрак»",
+  "trim_pattern.more_armor_trims.nihility": "Отделка «Небытие»",
+  "trim_pattern.more_armor_trims.horizon": "Отделка «Горизонт»",
+  "trim_pattern.more_armor_trims.origin": "Отделка «Исток»",
+  "trim_pattern.more_armor_trims.storm_armor_trim_smithing_template": "Отделка «Буря»",
+  "trim_pattern.more_armor_trims.ram_armor_trim_smithing_template": "Отделка «Овен»",
+  "trim_pattern.more_armor_trims.myth_armor_trim_smithing_template": "Отделка «Миф»",
+  "trim_pattern.more_armor_trims.greed_armor_trim_smithing_template": "Отделка «Алчность»",
+  "trim_pattern.more_armor_trims.beast_armor_trim_smithing_template": "Отделка «Зверь»",
+  "trim_pattern.more_armor_trims.fever_armor_trim_smithing_template": "Отделка «Жар»",
+  "trim_pattern.more_armor_trims.wraith_armor_trim_smithing_template": "Отделка «Призрак»",
+  "trim_pattern.more_armor_trims.nihility_armor_trim_smithing_template": "Отделка «Небытие»",
+  "trim_pattern.more_armor_trims.horizon_armor_trim_smithing_template": "Отделка «Горизонт»",
+  "trim_pattern.more_armor_trims.origin_armor_trim_smithing_template": "Отделка «Исток»",
+
+  "advancements.adventure.trim_with_all_armor_patterns.title": "Галерея доспешного искусства",
+  "advancements.adventure.trim_with_all_armor_patterns.description": "Примените каждый кузнечный шаблон хотя бы раз"
+}
