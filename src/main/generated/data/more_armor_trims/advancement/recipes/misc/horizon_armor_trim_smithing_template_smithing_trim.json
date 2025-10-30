@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:horizon_armor_trim_smithing_template_smithing_trim"
+        "recipe": "more_armor_trims:horizon_armor_trim_smithing_template_smithing_trim"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:horizon_armor_trim_smithing_template_smithing_trim"
+      "more_armor_trims:horizon_armor_trim_smithing_template_smithing_trim"
     ]
   }
 }

@@ -2,6 +2,7 @@ package net.masik.morearmortrims;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.masik.morearmortrims.datagen.ModDynamicRegistryProvider;
 import net.masik.morearmortrims.datagen.ModRecipeProvider;
 import net.masik.morearmortrims.trim.ModTrimPatterns;
 import net.minecraft.registry.RegistryBuilder;
@@ -14,6 +15,7 @@ public class MoreArmorTrimsDataGenerator implements DataGeneratorEntrypoint {
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
 		pack.addProvider(ModRecipeProvider::new);
+		pack.addProvider(ModDynamicRegistryProvider::new);
 
 	}
 
