@@ -105,6 +105,17 @@ public class ModLootTableModifiers {
 
             }
 
+            if (key == RegistryKey.of(RegistryKeys.LOOT_TABLE, Identifier.of("entities/endermite"))) {
+
+                LootPool.Builder lootPool = LootPool.builder()
+                        .with(ItemEntry.builder(ModItems.PARASITE_ARMOR_TRIM_SMITHING_TEMPLATE))
+                        .conditionally(RandomChanceLootCondition.builder(0.2f))
+                        .conditionally(DamageSourcePropertiesLootCondition.builder(DamageSourcePredicate.Builder.create().sourceEntity(EntityPredicate.Builder.create().type(EntityType.ENDERMAN))));
+
+                tableBuilder.pool(lootPool);
+
+            }
+
         });
 
         LootTableEvents.REPLACE.register((key, original, source, registries) -> {
@@ -137,6 +148,16 @@ public class ModLootTableModifiers {
                                         LocationCheckLootCondition.builder(LocationPredicate.Builder.createBiome(registries.getWrapperOrThrow(RegistryKeys.BIOME).getOrThrow(BiomeKeys.OLD_GROWTH_PINE_TAIGA))),
                                         LocationCheckLootCondition.builder(LocationPredicate.Builder.createBiome(registries.getWrapperOrThrow(RegistryKeys.BIOME).getOrThrow(BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA)))
                                 )));
+
+                return mergePools(original, lootPool.build());
+
+            }
+
+            if (key == RegistryKey.of(RegistryKeys.LOOT_TABLE, Identifier.of("gameplay/cat_morning_gift"))) {
+
+                LootPool.Builder lootPool = LootPool.builder()
+                        .with(ItemEntry.builder(ModItems.TWILIGHT_ARMOR_TRIM_SMITHING_TEMPLATE)
+                                .weight(8));
 
                 return mergePools(original, lootPool.build());
 

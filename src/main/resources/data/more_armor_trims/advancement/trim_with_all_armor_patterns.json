@@ -168,6 +168,18 @@
         "recipe_id": "more_armor_trims:origin_armor_trim_smithing_template_smithing_trim"
       },
       "trigger": "minecraft:recipe_crafted"
+    },
+    "armor_trimmed_more_armor_trims:twilight_armor_trim_smithing_template_smithing_trim": {
+      "conditions": {
+        "recipe_id": "more_armor_trims:twilight_armor_trim_smithing_template_smithing_trim"
+      },
+      "trigger": "minecraft:recipe_crafted"
+    },
+    "armor_trimmed_more_armor_trims:parasite_armor_trim_smithing_template_smithing_trim": {
+      "conditions": {
+        "recipe_id": "more_armor_trims:parasite_armor_trim_smithing_template_smithing_trim"
+      },
+      "trigger": "minecraft:recipe_crafted"
     }
   },
   "display": {
@@ -267,6 +279,12 @@
     ],
     [
       "armor_trimmed_more_armor_trims:origin_armor_trim_smithing_template_smithing_trim"
+    ],
+    [
+      "armor_trimmed_more_armor_trims:twilight_armor_trim_smithing_template_smithing_trim"
+    ],
+    [
+      "armor_trimmed_more_armor_trims:parasite_armor_trim_smithing_template_smithing_trim"
     ]
   ],
   "rewards": {

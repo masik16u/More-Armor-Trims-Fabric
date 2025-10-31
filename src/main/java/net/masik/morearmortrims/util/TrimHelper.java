@@ -20,6 +20,8 @@ public class TrimHelper {
         add(ModItems.NIHILITY_ARMOR_TRIM_SMITHING_TEMPLATE);
         add(ModItems.HORIZON_ARMOR_TRIM_SMITHING_TEMPLATE);
         add(ModItems.ORIGIN_ARMOR_TRIM_SMITHING_TEMPLATE);
+        add(ModItems.TWILIGHT_ARMOR_TRIM_SMITHING_TEMPLATE);
+        add(ModItems.PARASITE_ARMOR_TRIM_SMITHING_TEMPLATE);
     }};
 
     public static final List<Item> TRIM_MATERIALS = new ArrayList<>() {{
@@ -33,6 +35,8 @@ public class TrimHelper {
         add(Items.COBBLED_DEEPSLATE);
         add(Items.COBBLESTONE);
         add(Items.MOSS_BLOCK);
+        add(Items.COBBLESTONE);
+        add(Items.OBSIDIAN);
     }};
 
 }
