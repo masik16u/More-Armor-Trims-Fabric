@@ -1,0 +1,14 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "more_armor_trims:twilight_armor_trim_smithing_template",
+          "weight": 8
+        }
+      ]
+    }
+  ]
+}
