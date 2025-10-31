@@ -9,6 +9,9 @@
   "item.more_armor_trims.nihility_armor_trim_smithing_template": "Nihility Armor Trim",
   "item.more_armor_trims.horizon_armor_trim_smithing_template": "Horizon Armor Trim",
   "item.more_armor_trims.origin_armor_trim_smithing_template": "Origin Armor Trim",
+  "item.more_armor_trims.twilight_armor_trim_smithing_template": "Twilight Armor Trim",
+  "item.more_armor_trims.parasite_armor_trim_smithing_template": "Parasite Armor Trim",
+  "item.more_armor_trims.witness_armor_trim_smithing_template": "Witness Armor Trim",
   "trim_pattern.more_armor_trims.storm": "Storm Armor Trim",
   "trim_pattern.more_armor_trims.ram": "Ram Armor Trim",
   "trim_pattern.more_armor_trims.myth": "Myth Armor Trim",
@@ -19,6 +22,9 @@
   "trim_pattern.more_armor_trims.nihility": "Nihility Armor Trim",
   "trim_pattern.more_armor_trims.horizon": "Horizon Armor Trim",
   "trim_pattern.more_armor_trims.origin": "Origin Armor Trim",
+  "trim_pattern.more_armor_trims.twilight": "Twilight Armor Trim",
+  "trim_pattern.more_armor_trims.parasite": "Parasite Armor Trim",
+  "trim_pattern.more_armor_trims.witness": "Witness Armor Trim",
 
   "advancements.adventure.trim_with_all_armor_patterns.title": "Full Card Collection",
   "advancements.adventure.trim_with_all_armor_patterns.description": "Apply every smithing template at least once"

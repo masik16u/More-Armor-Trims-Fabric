@@ -9,6 +9,9 @@
   "item.more_armor_trims.nihility_armor_trim_smithing_template": "Ornement du néant",
   "item.more_armor_trims.horizon_armor_trim_smithing_template": "Ornement de l'horizon",
   "item.more_armor_trims.origin_armor_trim_smithing_template": "Ornement d'origine",
+  "item.more_armor_trims.twilight_armor_trim_smithing_template": "Ornement du crépuscule",
+  "item.more_armor_trims.parasite_armor_trim_smithing_template": "Ornement du parasite",
+  "item.more_armor_trims.witness_armor_trim_smithing_template": "Ornement du témoin",
   "trim_pattern.more_armor_trims.storm": "Ornement de tempête",
   "trim_pattern.more_armor_trims.ram": "Ornement de bélier",
   "trim_pattern.more_armor_trims.myth": "Ornement du mythe",
@@ -19,6 +22,9 @@
   "trim_pattern.more_armor_trims.nihility": "Ornement du néant",
   "trim_pattern.more_armor_trims.horizon": "Ornement de l'horizon",
   "trim_pattern.more_armor_trims.origin": "Ornement d'origine",
+  "trim_pattern.more_armor_trims.twilight": "Ornement du crépuscule",
+  "trim_pattern.more_armor_trims.parasite": "Ornement du parasite",
+  "trim_pattern.more_armor_trims.witness": "Ornement du témoin",
 
   "advancements.adventure.trim_with_all_armor_patterns.title": "Collection complète des cartes",
   "advancements.adventure.trim_with_all_armor_patterns.description": "Appliquez tous les modèles de forge au moins une fois"

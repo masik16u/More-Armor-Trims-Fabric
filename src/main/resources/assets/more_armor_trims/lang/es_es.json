@@ -9,6 +9,9 @@
   "item.more_armor_trims.nihility_armor_trim_smithing_template": "Diseño de Armadura de Nihilidad",
   "item.more_armor_trims.horizon_armor_trim_smithing_template": "Diseño de Armadura de Horizonte",
   "item.more_armor_trims.origin_armor_trim_smithing_template": "Diseño de Armadura de Origen",
+  "item.more_armor_trims.twilight_armor_trim_smithing_template": "Diseño de Armadura de Ocaso",
+  "item.more_armor_trims.parasite_armor_trim_smithing_template": "Diseño de Armadura de Parásito",
+  "item.more_armor_trims.witness_armor_trim_smithing_template": "Diseño de Armadura de Testigo",
   "trim_pattern.more_armor_trims.storm": "Diseño de Armadura de Tormenta",
   "trim_pattern.more_armor_trims.ram": "Diseño de Armadura de Ariete",
   "trim_pattern.more_armor_trims.myth": "Diseño de Armadura de Mito",
@@ -19,6 +22,9 @@
   "trim_pattern.more_armor_trims.nihility": "Diseño de Armadura de Nihilidad",
   "trim_pattern.more_armor_trims.horizon": "Diseño de Armadura de Horizonte",
   "trim_pattern.more_armor_trims.origin": "Diseño de Armadura de Origen",
+  "trim_pattern.more_armor_trims.twilight": "Diseño de Armadura de Ocaso",
+  "trim_pattern.more_armor_trims.parasite": "Diseño de Armadura de Parásito",
+  "trim_pattern.more_armor_trims.witness": "Diseño de Armadura de Testigo",
 
   "advancements.adventure.trim_with_all_armor_patterns.title": "Colección de Cartas Completa",
   "advancements.adventure.trim_with_all_armor_patterns.description": "Aplica cada molde de herrería al menos una vez"

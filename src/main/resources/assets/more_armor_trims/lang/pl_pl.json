@@ -9,6 +9,9 @@
   "item.more_armor_trims.nihility_armor_trim_smithing_template": "Zdobienie zbroi „Nicość”",
   "item.more_armor_trims.horizon_armor_trim_smithing_template": "Zdobienie zbroi „Horyzont”",
   "item.more_armor_trims.origin_armor_trim_smithing_template": "Zdobienie zbroi „Pochodzenie”",
+  "item.more_armor_trims.twilight_armor_trim_smithing_template": "Zdobienie zbroi „Zmierzch”",
+  "item.more_armor_trims.parasite_armor_trim_smithing_template": "Zdobienie zbroi „Pasożyt”",
+  "item.more_armor_trims.witness_armor_trim_smithing_template": "Zdobienie zbroi „Świadek”",
   "trim_pattern.more_armor_trims.storm": "Zdobienie zbroi „Sztorm”",
   "trim_pattern.more_armor_trims.ram": "Zdobienie zbroi „Taran”",
   "trim_pattern.more_armor_trims.myth": "Zdobienie zbroi „Mit”",
@@ -19,6 +22,9 @@
   "trim_pattern.more_armor_trims.nihility": "Zdobienie zbroi „Nicość”",
   "trim_pattern.more_armor_trims.horizon": "Zdobienie zbroi „Horyzont”",
   "trim_pattern.more_armor_trims.origin": "Zdobienie zbroi „Pochodzenie”",
+  "trim_pattern.more_armor_trims.twilight": "Zdobienie zbroi „Zmierzch”",
+  "trim_pattern.more_armor_trims.parasite": "Zdobienie zbroi „Pasożyt”",
+  "trim_pattern.more_armor_trims.witness": "Zdobienie zbroi „Świadek”",
 
   "advancements.adventure.trim_with_all_armor_patterns.title": "Pełna kolekcja kart",
   "advancements.adventure.trim_with_all_armor_patterns.description": "Nałóż przynajmniej raz każde zdobienie zbroi"

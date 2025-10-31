@@ -9,6 +9,9 @@
   "item.more_armor_trims.nihility_armor_trim_smithing_template": "Nichtigkeit-Rüstungsbesatz",
   "item.more_armor_trims.horizon_armor_trim_smithing_template": "Horizont-Rüstungsbesatz",
   "item.more_armor_trims.origin_armor_trim_smithing_template": "Herkunft-Rüstungsbesatz",
+  "item.more_armor_trims.twilight_armor_trim_smithing_template": "Dämmerungs-Rüstungsverzierung",
+  "item.more_armor_trims.parasite_armor_trim_smithing_template": "Parasiten-Rüstungsverzierung",
+  "item.more_armor_trims.witness_armor_trim_smithing_template": "Zeugen-Rüstungsverzierung",
   "trim_pattern.more_armor_trims.storm": "Sturm-Rüstungsbesatz",
   "trim_pattern.more_armor_trims.ram": "Rammbock-Rüstungsbesatz",
   "trim_pattern.more_armor_trims.myth": "Mythos-Rüstungsbesatz",
@@ -19,6 +22,9 @@
   "trim_pattern.more_armor_trims.nihility": "Nichtigkeit-Rüstungsbesatz",
   "trim_pattern.more_armor_trims.horizon": "Horizont-Rüstungsbesatz",
   "trim_pattern.more_armor_trims.origin": "Herkunft-Rüstungsbesatz",
+  "trim_pattern.more_armor_trims.twilight": "Dämmerungs-Rüstungsverzierung",
+  "trim_pattern.more_armor_trims.parasite": "Parasiten-Rüstungsverzierung",
+  "trim_pattern.more_armor_trims.witness": "Zeugen-Rüstungsverzierung",
 
   "advancements.adventure.trim_with_all_armor_patterns.title": "Komplette Kartensammlung",
   "advancements.adventure.trim_with_all_armor_patterns.description": "Wende alle Schmiedevorlagen mindestens einmal an"

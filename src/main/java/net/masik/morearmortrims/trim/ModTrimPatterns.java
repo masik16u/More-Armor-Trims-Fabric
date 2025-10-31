@@ -21,6 +21,9 @@ public class ModTrimPatterns {
     public static final RegistryKey<ArmorTrimPattern> NIHILITY = of("nihility");
     public static final RegistryKey<ArmorTrimPattern> HORIZON = of("horizon");
     public static final RegistryKey<ArmorTrimPattern> ORIGIN = of("origin");
+    public static final RegistryKey<ArmorTrimPattern> TWILIGHT = of("twilight");
+    public static final RegistryKey<ArmorTrimPattern> PARASITE = of("parasite");
+    public static final RegistryKey<ArmorTrimPattern> WITNESS = of("witness");
 
     public static void bootstrap(Registerable<ArmorTrimPattern> registry) {
         register(registry, STORM);
@@ -33,6 +36,9 @@ public class ModTrimPatterns {
         register(registry, NIHILITY);
         register(registry, HORIZON);
         register(registry, ORIGIN);
+        register(registry, TWILIGHT);
+        register(registry, PARASITE);
+        register(registry, WITNESS);
     }
 
     private static void register(Registerable<ArmorTrimPattern> registry, RegistryKey<ArmorTrimPattern> key) {

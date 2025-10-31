@@ -2,14 +2,20 @@ package net.masik.morearmortrims.util;
 
 import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
 import net.masik.morearmortrims.item.ModItems;
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.condition.*;
 import net.minecraft.loot.context.LootContext;
 import net.minecraft.loot.entry.*;
+import net.minecraft.loot.operator.BoundedIntUnaryOperator;
+import net.minecraft.predicate.StatePredicate;
+import net.minecraft.predicate.block.BlockStatePredicate;
 import net.minecraft.predicate.entity.*;
 import net.minecraft.registry.*;
+import net.minecraft.state.property.BooleanProperty;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeKeys;
@@ -27,7 +33,8 @@ public class ModLootTableModifiers {
                 LootPool.Builder lootPool = LootPool.builder()
                         .with(ItemEntry.builder(ModItems.NIHILITY_ARMOR_TRIM_SMITHING_TEMPLATE))
                         .conditionally(RandomChanceLootCondition.builder(0.3f))
-                        .conditionally(LocationCheckLootCondition.builder(LocationPredicate.Builder.createDimension(World.OVERWORLD)));
+                        .conditionally(LocationCheckLootCondition.builder(LocationPredicate.Builder
+                                .createDimension(World.OVERWORLD)));
 
                 tableBuilder.pool(lootPool);
 
@@ -39,9 +46,12 @@ public class ModLootTableModifiers {
                         .with(ItemEntry.builder(ModItems.GREED_ARMOR_TRIM_SMITHING_TEMPLATE))
                         .conditionally(RandomChanceLootCondition.builder(0.3f))
                         .conditionally(AnyOfLootCondition.builder(
-                                LocationCheckLootCondition.builder(LocationPredicate.Builder.createBiome(registries.getOrThrow(RegistryKeys.BIOME).getOrThrow(BiomeKeys.BADLANDS))),
-                                LocationCheckLootCondition.builder(LocationPredicate.Builder.createBiome(registries.getOrThrow(RegistryKeys.BIOME).getOrThrow(BiomeKeys.ERODED_BADLANDS))),
-                                LocationCheckLootCondition.builder(LocationPredicate.Builder.createBiome(registries.getOrThrow(RegistryKeys.BIOME).getOrThrow(BiomeKeys.WOODED_BADLANDS)))
+                                LocationCheckLootCondition.builder(LocationPredicate.Builder.createBiome(registries.getOrThrow(RegistryKeys.BIOME)
+                                        .getOrThrow(BiomeKeys.BADLANDS))),
+                                LocationCheckLootCondition.builder(LocationPredicate.Builder.createBiome(registries.getOrThrow(RegistryKeys.BIOME)
+                                        .getOrThrow(BiomeKeys.ERODED_BADLANDS))),
+                                LocationCheckLootCondition.builder(LocationPredicate.Builder.createBiome(registries.getOrThrow(RegistryKeys.BIOME)
+                                        .getOrThrow(BiomeKeys.WOODED_BADLANDS)))
                         ));
 
                 tableBuilder.pool(lootPool);
@@ -63,7 +73,8 @@ public class ModLootTableModifiers {
                 LootPool.Builder lootPool = LootPool.builder()
                         .with(ItemEntry.builder(ModItems.FEVER_ARMOR_TRIM_SMITHING_TEMPLATE))
                         .conditionally(RandomChanceLootCondition.builder(0.2f))
-                        .conditionally(LocationCheckLootCondition.builder(LocationPredicate.Builder.createDimension(World.NETHER)));
+                        .conditionally(LocationCheckLootCondition.builder(LocationPredicate.Builder
+                                .createDimension(World.NETHER)));
 
                 tableBuilder.pool(lootPool);
 
@@ -74,7 +85,8 @@ public class ModLootTableModifiers {
                 LootPool.Builder lootPool = LootPool.builder()
                         .with(ItemEntry.builder(ModItems.RAM_ARMOR_TRIM_SMITHING_TEMPLATE))
                         .conditionally(EntityPropertiesLootCondition.builder(LootContext.EntityTarget.THIS,
-                                EntityPredicate.Builder.create().vehicle(EntityPredicate.Builder.create().type(registries.getOrThrow(RegistryKeys.ENTITY_TYPE), EntityType.RAVAGER))))
+                                EntityPredicate.Builder.create().vehicle(EntityPredicate.Builder.create().type(registries
+                                        .getOrThrow(RegistryKeys.ENTITY_TYPE), EntityType.RAVAGER))))
                         .conditionally(KilledByPlayerLootCondition.builder());
 
                 tableBuilder.pool(lootPool);
@@ -86,7 +98,8 @@ public class ModLootTableModifiers {
                 LootPool.Builder lootPool = LootPool.builder()
                         .with(ItemEntry.builder(ModItems.RAM_ARMOR_TRIM_SMITHING_TEMPLATE))
                         .conditionally(EntityPropertiesLootCondition.builder(LootContext.EntityTarget.THIS,
-                                EntityPredicate.Builder.create().passenger(EntityPredicate.Builder.create().type(registries.getOrThrow(RegistryKeys.ENTITY_TYPE), EntityType.EVOKER))))
+                                EntityPredicate.Builder.create().passenger(EntityPredicate.Builder.create().type(registries
+                                        .getOrThrow(RegistryKeys.ENTITY_TYPE), EntityType.EVOKER))))
                         .conditionally(KilledByPlayerLootCondition.builder());
 
                 tableBuilder.pool(lootPool);
@@ -98,8 +111,35 @@ public class ModLootTableModifiers {
                 LootPool.Builder lootPool = LootPool.builder()
                         .with(ItemEntry.builder(ModItems.WRAITH_ARMOR_TRIM_SMITHING_TEMPLATE))
                         .conditionally(KilledByPlayerLootCondition.builder())
+                        .conditionally(LocationCheckLootCondition.builder(LocationPredicate.Builder.createBiome(registries.getOrThrow(RegistryKeys.BIOME)
+                                .getOrThrow(BiomeKeys.SOUL_SAND_VALLEY))));
+
+                tableBuilder.pool(lootPool);
+
+            }
+
+            if (key == RegistryKey.of(RegistryKeys.LOOT_TABLE, Identifier.of("entities/endermite"))) {
+
+                LootPool.Builder lootPool = LootPool.builder()
+                        .with(ItemEntry.builder(ModItems.PARASITE_ARMOR_TRIM_SMITHING_TEMPLATE))
+                        .conditionally(RandomChanceLootCondition.builder(0.2f))
+                        .conditionally(DamageSourcePropertiesLootCondition.builder(DamageSourcePredicate.Builder.create().sourceEntity(EntityPredicate.Builder.create().type(registries
+                                .getOrThrow(RegistryKeys.ENTITY_TYPE), EntityType.ENDERMAN))));
+
+                tableBuilder.pool(lootPool);
+
+            }
+
+            if (key == RegistryKey.of(RegistryKeys.LOOT_TABLE, Identifier.of("blocks/creaking_heart"))) {
+
+                LootPool.Builder lootPool = LootPool.builder()
+                        .with(ItemEntry.builder(ModItems.WITNESS_ARMOR_TRIM_SMITHING_TEMPLATE))
+                        .conditionally(RandomChanceLootCondition.builder(0.2f))
+                        .conditionally(TimeCheckLootCondition.create(BoundedIntUnaryOperator.create(13000, 23000)))
+                        .conditionally(BlockStatePropertyLootCondition.builder(Blocks.CREAKING_HEART).properties(StatePredicate.Builder.create()
+                                .exactMatch(Properties.NATURAL, true)))
                         .conditionally(LocationCheckLootCondition.builder(LocationPredicate.Builder
-                                .createBiome(registries.getOrThrow(RegistryKeys.BIOME).getOrThrow(BiomeKeys.SOUL_SAND_VALLEY))));
+                                .createDimension(World.OVERWORLD)));
 
                 tableBuilder.pool(lootPool);
 
@@ -134,9 +174,21 @@ public class ModLootTableModifiers {
                 LootPool.Builder lootPool = LootPool.builder()
                         .with(ItemEntry.builder(ModItems.ORIGIN_ARMOR_TRIM_SMITHING_TEMPLATE)
                                 .conditionally(AnyOfLootCondition.builder(
-                                        LocationCheckLootCondition.builder(LocationPredicate.Builder.createBiome(registries.getOrThrow(RegistryKeys.BIOME).getOrThrow(BiomeKeys.OLD_GROWTH_PINE_TAIGA))),
-                                        LocationCheckLootCondition.builder(LocationPredicate.Builder.createBiome(registries.getOrThrow(RegistryKeys.BIOME).getOrThrow(BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA)))
+                                        LocationCheckLootCondition.builder(LocationPredicate.Builder.createBiome(registries.getOrThrow(RegistryKeys.BIOME)
+                                                .getOrThrow(BiomeKeys.OLD_GROWTH_PINE_TAIGA))),
+                                        LocationCheckLootCondition.builder(LocationPredicate.Builder.createBiome(registries.getOrThrow(RegistryKeys.BIOME)
+                                                .getOrThrow(BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA)))
                                 )));
+
+                return mergePools(original, lootPool.build());
+
+            }
+
+            if (key == RegistryKey.of(RegistryKeys.LOOT_TABLE, Identifier.of("gameplay/cat_morning_gift"))) {
+
+                LootPool.Builder lootPool = LootPool.builder()
+                        .with(ItemEntry.builder(ModItems.TWILIGHT_ARMOR_TRIM_SMITHING_TEMPLATE)
+                                .weight(8));
 
                 return mergePools(original, lootPool.build());
 

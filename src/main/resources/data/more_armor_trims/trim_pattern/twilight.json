@@ -1,0 +1,7 @@
+{
+  "asset_id": "more_armor_trims:twilight",
+  "description": {
+    "translate": "trim_pattern.more_armor_trims.twilight"
+  },
+  "template_item": "more_armor_trims:twilight_armor_trim_smithing_template"
+}

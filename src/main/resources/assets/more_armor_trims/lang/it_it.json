@@ -9,6 +9,9 @@
   "item.more_armor_trims.nihility_armor_trim_smithing_template": "Ornamento stile nihilum",
   "item.more_armor_trims.horizon_armor_trim_smithing_template": "Ornamento stile orizzonte",
   "item.more_armor_trims.origin_armor_trim_smithing_template": "Ornamento stile origine",
+  "item.more_armor_trims.twilight_armor_trim_smithing_template": "Ornamento stile crepuscolo",
+  "item.more_armor_trims.parasite_armor_trim_smithing_template": "Ornamento stile parassita",
+  "item.more_armor_trims.witness_armor_trim_smithing_template": "Ornamento stile testimone",
   "trim_pattern.more_armor_trims.storm": "Ornamento stile tempesta",
   "trim_pattern.more_armor_trims.ram": "Ornamento stile ariete",
   "trim_pattern.more_armor_trims.myth": "Ornamento stile mito",
@@ -19,6 +22,9 @@
   "trim_pattern.more_armor_trims.nihility": "Ornamento stile nihilum",
   "trim_pattern.more_armor_trims.horizon": "Ornamento stile orizzonte",
   "trim_pattern.more_armor_trims.origin": "Ornamento stile origine",
+  "trim_pattern.more_armor_trims.twilight": "Ornamento stile crepuscolo",
+  "trim_pattern.more_armor_trims.parasite": "Ornamento stile parassita",
+  "trim_pattern.more_armor_trims.witness": "Ornamento stile testimone",
 
   "advancements.adventure.trim_with_all_armor_patterns.title": "Collezione completa di carte",
   "advancements.adventure.trim_with_all_armor_patterns.description": "Applica almeno una volta tutti schemi di forgiatura"

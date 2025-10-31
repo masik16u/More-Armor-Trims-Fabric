@@ -22,7 +22,13 @@
         "more_armor_trims:trims/entity/humanoid/horizon",
         "more_armor_trims:trims/entity/humanoid_leggings/horizon",
         "more_armor_trims:trims/entity/humanoid/origin",
-        "more_armor_trims:trims/entity/humanoid_leggings/origin"
+        "more_armor_trims:trims/entity/humanoid_leggings/origin",
+        "more_armor_trims:trims/entity/humanoid/twilight",
+        "more_armor_trims:trims/entity/humanoid_leggings/twilight",
+        "more_armor_trims:trims/entity/humanoid/parasite",
+        "more_armor_trims:trims/entity/humanoid_leggings/parasite",
+        "more_armor_trims:trims/entity/humanoid/witness",
+        "more_armor_trims:trims/entity/humanoid_leggings/witness"
       ],
       "palette_key": "trims/color_palettes/trim_palette",
       "permutations": {
