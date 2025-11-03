@@ -28,6 +28,7 @@ public class ModItems {
     public static final SmithingTemplateItem ORIGIN_ARMOR_TRIM_SMITHING_TEMPLATE = registerSmithingTemplateItem("origin_armor_trim_smithing_template");
     public static final SmithingTemplateItem TWILIGHT_ARMOR_TRIM_SMITHING_TEMPLATE = registerSmithingTemplateItem("twilight_armor_trim_smithing_template");
     public static final SmithingTemplateItem PARASITE_ARMOR_TRIM_SMITHING_TEMPLATE = registerSmithingTemplateItem("parasite_armor_trim_smithing_template");
+    public static final SmithingTemplateItem WITNESS_ARMOR_TRIM_SMITHING_TEMPLATE = registerSmithingTemplateItem("witness_armor_trim_smithing_template");
 
     private static SmithingTemplateItem registerSmithingTemplateItem(String name) {
         Identifier id = Identifier.of(MoreArmorTrims.MOD_ID, name);
@@ -53,6 +54,7 @@ public class ModItems {
         entries.addAfter(HORIZON_ARMOR_TRIM_SMITHING_TEMPLATE, ORIGIN_ARMOR_TRIM_SMITHING_TEMPLATE);
         entries.addAfter(ORIGIN_ARMOR_TRIM_SMITHING_TEMPLATE, TWILIGHT_ARMOR_TRIM_SMITHING_TEMPLATE);
         entries.addAfter(TWILIGHT_ARMOR_TRIM_SMITHING_TEMPLATE, PARASITE_ARMOR_TRIM_SMITHING_TEMPLATE);
+        entries.addAfter(PARASITE_ARMOR_TRIM_SMITHING_TEMPLATE, WITNESS_ARMOR_TRIM_SMITHING_TEMPLATE);
 
     }
 

@@ -1,15 +1,22 @@
 package net.masik.morearmortrims.util;
 
 import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
+import net.fabricmc.loader.api.FabricLoader;
 import net.masik.morearmortrims.item.ModItems;
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.condition.*;
 import net.minecraft.loot.context.LootContext;
 import net.minecraft.loot.entry.*;
+import net.minecraft.loot.operator.BoundedIntUnaryOperator;
+import net.minecraft.predicate.StatePredicate;
 import net.minecraft.predicate.entity.*;
 import net.minecraft.registry.*;
+import net.minecraft.state.property.BooleanProperty;
+import net.minecraft.state.property.Properties;
+import net.minecraft.state.property.Property;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeKeys;
@@ -114,6 +121,23 @@ public class ModLootTableModifiers {
 
                 tableBuilder.pool(lootPool);
 
+            }
+
+            if (FabricLoader.getInstance().isModLoaded("vanillabackport")) {
+                if (key == RegistryKey.of(RegistryKeys.LOOT_TABLE, Identifier.of("vanillabackport","blocks/creaking_heart"))) {
+
+                    LootPool.Builder lootPool = LootPool.builder()
+                            .with(ItemEntry.builder(ModItems.WITNESS_ARMOR_TRIM_SMITHING_TEMPLATE))
+                            .conditionally(RandomChanceLootCondition.builder(0.2f))
+                            .conditionally(TimeCheckLootCondition.create(BoundedIntUnaryOperator.create(13000, 23000)))
+                            .conditionally(BlockStatePropertyLootCondition.builder(registries.getWrapperOrThrow(RegistryKeys.BLOCK).getOrThrow(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of("vanillabackport", "creaking_heart"))).value()).properties(StatePredicate.Builder.create()
+                                    .exactMatch(BooleanProperty.of("natural"), true)))
+                            .conditionally(LocationCheckLootCondition.builder(LocationPredicate.Builder
+                                    .createDimension(World.OVERWORLD)));
+
+                    tableBuilder.pool(lootPool);
+
+                }
             }
 
         });

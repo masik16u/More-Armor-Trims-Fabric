@@ -2,6 +2,7 @@ package net.masik.morearmortrims.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.masik.morearmortrims.item.ModItems;
 import net.masik.morearmortrims.util.TrimHelper;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.item.Item;
@@ -20,7 +21,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         for (int i = 0; i < TrimHelper.SMITHING_TEMPLATES.size(); i++) {
 
-            offerSmithingTemplateCopyingRecipe(exporter, TrimHelper.SMITHING_TEMPLATES.get(i), TrimHelper.TRIM_MATERIALS.get(i));
+            if (!TrimHelper.SMITHING_TEMPLATES.get(i).equals(ModItems.WITNESS_ARMOR_TRIM_SMITHING_TEMPLATE)) {
+                offerSmithingTemplateCopyingRecipe(exporter, TrimHelper.SMITHING_TEMPLATES.get(i), TrimHelper.TRIM_MATERIALS.get(i));
+            }
 
         }
 
