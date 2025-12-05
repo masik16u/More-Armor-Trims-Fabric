@@ -27,5 +27,7 @@
   "trim_pattern.more_armor_trims.witness": "Witness Armor Trim",
 
   "advancements.adventure.trim_with_all_armor_patterns.title": "Full Card Collection",
-  "advancements.adventure.trim_with_all_armor_patterns.description": "Apply every smithing template at least once"
+  "advancements.adventure.trim_with_all_armor_patterns.description": "Apply every smithing template at least once",
+
+  "modmenu.descriptionTranslation.more_armor_trims": "Adds new armor trims."
 }

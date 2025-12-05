@@ -135,7 +135,7 @@ public class ModLootTableModifiers {
                 LootPool.Builder lootPool = LootPool.builder()
                         .with(ItemEntry.builder(ModItems.WITNESS_ARMOR_TRIM_SMITHING_TEMPLATE))
                         .conditionally(RandomChanceLootCondition.builder(0.2f))
-                        .conditionally(TimeCheckLootCondition.create(BoundedIntUnaryOperator.create(13000, 23000)))
+                        .conditionally(TimeCheckLootCondition.create(BoundedIntUnaryOperator.create(13000, 23000)).period(24000))
                         .conditionally(BlockStatePropertyLootCondition.builder(Blocks.CREAKING_HEART).properties(StatePredicate.Builder.create()
                                 .exactMatch(Properties.NATURAL, true)))
                         .conditionally(LocationCheckLootCondition.builder(LocationPredicate.Builder
