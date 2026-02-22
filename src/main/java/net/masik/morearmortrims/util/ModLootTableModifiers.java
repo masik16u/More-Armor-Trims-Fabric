@@ -84,7 +84,7 @@ public class ModLootTableModifiers {
 
                 LootPool.Builder lootPool = LootPool.builder()
                         .with(ItemEntry.builder(ModItems.RAM_ARMOR_TRIM_SMITHING_TEMPLATE))
-                        .conditionally(EntityPropertiesLootCondition.builder(LootContext.EntityTarget.THIS,
+                        .conditionally(EntityPropertiesLootCondition.builder(LootContext.EntityReference.THIS,
                                 EntityPredicate.Builder.create().vehicle(EntityPredicate.Builder.create().type(registries
                                         .getOrThrow(RegistryKeys.ENTITY_TYPE), EntityType.RAVAGER))))
                         .conditionally(KilledByPlayerLootCondition.builder());
@@ -97,7 +97,7 @@ public class ModLootTableModifiers {
 
                 LootPool.Builder lootPool = LootPool.builder()
                         .with(ItemEntry.builder(ModItems.RAM_ARMOR_TRIM_SMITHING_TEMPLATE))
-                        .conditionally(EntityPropertiesLootCondition.builder(LootContext.EntityTarget.THIS,
+                        .conditionally(EntityPropertiesLootCondition.builder(LootContext.EntityReference.THIS,
                                 EntityPredicate.Builder.create().passenger(EntityPredicate.Builder.create().type(registries
                                         .getOrThrow(RegistryKeys.ENTITY_TYPE), EntityType.EVOKER))))
                         .conditionally(KilledByPlayerLootCondition.builder());
