@@ -137,9 +137,7 @@ public class ModLootTableModifiers {
                         .conditionally(RandomChanceLootCondition.builder(0.2f))
                         .conditionally(TimeCheckLootCondition.create(BoundedIntUnaryOperator.create(13000, 23000)).period(24000))
                         .conditionally(BlockStatePropertyLootCondition.builder(Blocks.CREAKING_HEART).properties(StatePredicate.Builder.create()
-                                .exactMatch(Properties.NATURAL, true)))
-                        .conditionally(LocationCheckLootCondition.builder(LocationPredicate.Builder
-                                .createDimension(World.OVERWORLD)));
+                                .exactMatch(Properties.NATURAL, true)));
 
                 tableBuilder.pool(lootPool);
 
