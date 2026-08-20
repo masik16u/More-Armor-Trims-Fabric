@@ -1,0 +1,47 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "more_armor_trims:witness_armor_trim_smithing_template"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.2
+        },
+        {
+          "condition": "minecraft:inverted",
+          "term": {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "enchantments": [
+                {
+                  "enchantment": "minecraft:silk_touch"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "minecraft:creaking_heart",
+          "properties": {
+            "natural": "true"
+          }
+        },
+        {
+          "condition": "minecraft:time_check",
+          "value": {
+            "min": 13000,
+            "max": 23000
+          },
+          "period": 24000
+        }
+      ]
+    }
+  ]
+}

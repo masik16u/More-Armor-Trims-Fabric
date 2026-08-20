@@ -9,6 +9,9 @@
   "trim_pattern.more_armor_trims.nihility": "Enfeite da Nihilidade",
   "trim_pattern.more_armor_trims.horizon": "Enfeite do Horizonte",
   "trim_pattern.more_armor_trims.origin": "Enfeite da Origem",
+  "trim_pattern.more_armor_trims.twilight": "Enfeite do Crepúsculo",
+  "trim_pattern.more_armor_trims.parasite": "Enfeite de Parasita",
+  "trim_pattern.more_armor_trims.witness": "Enfeite da Testemunha",
   "trim_pattern.more_armor_trims.storm_armor_trim_smithing_template": "Enfeite da Tempestade",
   "trim_pattern.more_armor_trims.ram_armor_trim_smithing_template": "Enfeite da Ram",
   "trim_pattern.more_armor_trims.myth_armor_trim_smithing_template": "Enfeite do Mito",
@@ -19,6 +22,9 @@
   "trim_pattern.more_armor_trims.nihility_armor_trim_smithing_template": "Enfeite da Nihilidade",
   "trim_pattern.more_armor_trims.horizon_armor_trim_smithing_template": "Enfeite do Horizonte",
   "trim_pattern.more_armor_trims.origin_armor_trim_smithing_template": "Enfeite da Origem",
+  "trim_pattern.more_armor_trims.twilight_armor_trim_smithing_template": "Enfeite do Crepúsculo",
+  "trim_pattern.more_armor_trims.parasite_armor_trim_smithing_template": "Enfeite de Parasita",
+  "trim_pattern.more_armor_trims.witness_armor_trim_smithing_template": "Enfeite da Testemunha",
 
   "advancements.adventure.trim_with_all_armor_patterns.title": "Colecionador de Moldes",
   "advancements.adventure.trim_with_all_armor_patterns.description": "Aplique todas os Moldes pelo menos UMA vez"

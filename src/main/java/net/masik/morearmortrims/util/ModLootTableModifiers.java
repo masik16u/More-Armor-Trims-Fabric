@@ -6,7 +6,6 @@ import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.entry.LootPoolEntry;
 import net.minecraft.util.Identifier;
-import org.apache.http.pool.PoolEntry;
 
 import java.util.ArrayList;
 import java.util.Arrays;
