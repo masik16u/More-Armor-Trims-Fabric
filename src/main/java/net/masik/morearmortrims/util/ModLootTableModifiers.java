@@ -4,6 +4,10 @@ import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
 import net.fabricmc.loader.api.FabricLoader;
 import net.masik.morearmortrims.item.ModItems;
 import net.minecraft.block.Blocks;
+import net.minecraft.component.ComponentType;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.ItemEnchantmentsComponent;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.EntityType;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
@@ -11,8 +15,13 @@ import net.minecraft.loot.condition.*;
 import net.minecraft.loot.context.LootContext;
 import net.minecraft.loot.entry.*;
 import net.minecraft.loot.operator.BoundedIntUnaryOperator;
+import net.minecraft.predicate.ComponentPredicate;
+import net.minecraft.predicate.NumberRange;
 import net.minecraft.predicate.StatePredicate;
 import net.minecraft.predicate.entity.*;
+import net.minecraft.predicate.item.EnchantmentPredicate;
+import net.minecraft.predicate.item.EnchantmentsPredicate;
+import net.minecraft.predicate.item.ItemPredicate;
 import net.minecraft.registry.*;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
@@ -126,9 +135,17 @@ public class ModLootTableModifiers {
             if (FabricLoader.getInstance().isModLoaded("vanillabackport")) {
                 if (key == RegistryKey.of(RegistryKeys.LOOT_TABLE, Identifier.of("blocks/creaking_heart"))) {
 
+                    ItemEnchantmentsComponent.Builder itemEnchantmentsComponent = new ItemEnchantmentsComponent.Builder(ItemEnchantmentsComponent.DEFAULT);
+                    itemEnchantmentsComponent.add(registries.getWrapperOrThrow(RegistryKeys.ENCHANTMENT).getOrThrow(Enchantments.SILK_TOUCH), 1);
+
                     LootPool.Builder lootPool = LootPool.builder()
                             .with(ItemEntry.builder(ModItems.WITNESS_ARMOR_TRIM_SMITHING_TEMPLATE))
                             .conditionally(RandomChanceLootCondition.builder(0.2f))
+                            .conditionally(InvertedLootCondition.builder(
+                                    MatchToolLootCondition.builder(ItemPredicate.Builder.create()
+                                            .component(ComponentPredicate.builder()
+                                                    .add(DataComponentTypes.ENCHANTMENTS, itemEnchantmentsComponent.build())
+                                                    .build()))))
                             .conditionally(TimeCheckLootCondition.create(BoundedIntUnaryOperator.create(13000, 23000)).period(24000))
                             .conditionally(BlockStatePropertyLootCondition.builder(registries.getWrapperOrThrow(RegistryKeys.BLOCK).getOrThrow(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of("creaking_heart"))).value()).properties(StatePredicate.Builder.create()
                                     .exactMatch(BooleanProperty.of("natural"), true)))
