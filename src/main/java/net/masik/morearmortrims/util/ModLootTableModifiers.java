@@ -3,6 +3,7 @@ package net.masik.morearmortrims.util;
 import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
 import net.masik.morearmortrims.item.ModItems;
 import net.minecraft.block.Blocks;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.EntityType;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
@@ -10,9 +11,15 @@ import net.minecraft.loot.condition.*;
 import net.minecraft.loot.context.LootContext;
 import net.minecraft.loot.entry.*;
 import net.minecraft.loot.operator.BoundedIntUnaryOperator;
+import net.minecraft.predicate.NumberRange;
 import net.minecraft.predicate.StatePredicate;
 import net.minecraft.predicate.block.BlockStatePredicate;
+import net.minecraft.predicate.component.ComponentPredicateTypes;
+import net.minecraft.predicate.component.ComponentsPredicate;
 import net.minecraft.predicate.entity.*;
+import net.minecraft.predicate.item.EnchantmentPredicate;
+import net.minecraft.predicate.item.EnchantmentsPredicate;
+import net.minecraft.predicate.item.ItemPredicate;
 import net.minecraft.registry.*;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
@@ -135,6 +142,13 @@ public class ModLootTableModifiers {
                 LootPool.Builder lootPool = LootPool.builder()
                         .with(ItemEntry.builder(ModItems.WITNESS_ARMOR_TRIM_SMITHING_TEMPLATE))
                         .conditionally(RandomChanceLootCondition.builder(0.2f))
+                        .conditionally(InvertedLootCondition.builder(
+                                MatchToolLootCondition.builder(ItemPredicate.Builder.create()
+                                        .components(ComponentsPredicate.Builder.create()
+                                                .partial(ComponentPredicateTypes.ENCHANTMENTS,
+                                                        EnchantmentsPredicate.enchantments(List.of(new EnchantmentPredicate(
+                                                                registries.getOrThrow(RegistryKeys.ENCHANTMENT).getOrThrow(Enchantments.SILK_TOUCH), NumberRange.IntRange.ANY))))
+                                                .build()))))
                         .conditionally(TimeCheckLootCondition.create(BoundedIntUnaryOperator.create(13000, 23000)).period(24000))
                         .conditionally(BlockStatePropertyLootCondition.builder(Blocks.CREAKING_HEART).properties(StatePredicate.Builder.create()
                                 .exactMatch(Properties.NATURAL, true)));
