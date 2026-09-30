@@ -22,6 +22,7 @@ import net.minecraft.predicate.entity.*;
 import net.minecraft.predicate.item.EnchantmentPredicate;
 import net.minecraft.predicate.item.EnchantmentsPredicate;
 import net.minecraft.predicate.item.ItemPredicate;
+import net.minecraft.predicate.item.ItemSubPredicateTypes;
 import net.minecraft.registry.*;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
@@ -135,17 +136,14 @@ public class ModLootTableModifiers {
             if (FabricLoader.getInstance().isModLoaded("vanillabackport")) {
                 if (key == RegistryKey.of(RegistryKeys.LOOT_TABLE, Identifier.of("blocks/creaking_heart"))) {
 
-                    ItemEnchantmentsComponent.Builder itemEnchantmentsComponent = new ItemEnchantmentsComponent.Builder(ItemEnchantmentsComponent.DEFAULT);
-                    itemEnchantmentsComponent.add(registries.getWrapperOrThrow(RegistryKeys.ENCHANTMENT).getOrThrow(Enchantments.SILK_TOUCH), 1);
-
                     LootPool.Builder lootPool = LootPool.builder()
                             .with(ItemEntry.builder(ModItems.WITNESS_ARMOR_TRIM_SMITHING_TEMPLATE))
                             .conditionally(RandomChanceLootCondition.builder(0.2f))
                             .conditionally(InvertedLootCondition.builder(
                                     MatchToolLootCondition.builder(ItemPredicate.Builder.create()
-                                            .component(ComponentPredicate.builder()
-                                                    .add(DataComponentTypes.ENCHANTMENTS, itemEnchantmentsComponent.build())
-                                                    .build()))))
+                                            .subPredicate(ItemSubPredicateTypes.ENCHANTMENTS,
+                                                    EnchantmentsPredicate.enchantments(List.of(new EnchantmentPredicate(
+                                                            registries.getWrapperOrThrow(RegistryKeys.ENCHANTMENT).getOrThrow(Enchantments.SILK_TOUCH), NumberRange.IntRange.ANY)))))))
                             .conditionally(TimeCheckLootCondition.create(BoundedIntUnaryOperator.create(13000, 23000)).period(24000))
                             .conditionally(BlockStatePropertyLootCondition.builder(registries.getWrapperOrThrow(RegistryKeys.BLOCK).getOrThrow(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of("creaking_heart"))).value()).properties(StatePredicate.Builder.create()
                                     .exactMatch(BooleanProperty.of("natural"), true)))
