@@ -17,7 +17,7 @@ public class ModRegistries {
     private static void registerCustomWanderingTrades() {
         TradeOfferHelper.registerWanderingTraderOffers(wanderingTraderOffersBuilder -> {
             wanderingTraderOffersBuilder.addOffersToPool(TradeOfferHelper.WanderingTraderOffersBuilder.SELL_SPECIAL_ITEMS_POOL,
-                    (entity, random) -> new TradeOffer(
+                    (world, entity, random) -> new TradeOffer(
                             new TradedItem(Items.EMERALD, 15),
                             new ItemStack(ModItems.MYTH_ARMOR_TRIM_SMITHING_TEMPLATE, 1),
                             2, 0, 0));
